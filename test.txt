@@ -144,3 +144,10 @@ if (url != -1) {
             }
         })
 
+
+
+//     const catchUrl = new URL(window.location)
+// const params = new URLSearchParams(catchUrl.search)
+// console.log("params "+ params);
+// params.get("id=")
+// console.log(params.get("id"));
