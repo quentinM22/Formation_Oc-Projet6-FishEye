@@ -1,10 +1,10 @@
 async function getData() {
     const url = '/data/photographers.json'
-    const data = await fetch(url)
+    return await fetch(url)
     .then(res => res.json())
     .then(data => data)
-    .catch(error=> console.log("erreur: " + error))
-    return data
+    .catch(error=> console.log("erreur: " + error));
+
 }
 
 async function displayData(photographers) {
