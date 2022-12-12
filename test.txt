@@ -1,0 +1,146 @@
+const url = window.location.href.indexOf('?')
+if (url != -1) {
+    // récuperation Id envoyer via L'url
+    const findId = window.location.href.substring(url + 4)
+    const findPhotographers = photographers.find(e => e.id == findId)
+    // changement title page "FishEye | name"
+    document.title = "FishEye | " + findPhotographers.name;
+    /*---------Création Dom Photographer -------*/
+    // DOM
+    const photographer = document.querySelector('#photographer')
+    const card = document.createElement('div')
+    const cardBody = document.createElement('div')
+    const cardBody_btn = document.createElement('div')
+    const cardBody_img = document.createElement('div')
+    const h2 = document.createElement('h2')
+    const h3 = document.createElement('h3')
+    const p = document.createElement('p')
+    const card_btn = document.createElement('button')
+    const card_img = document.createElement('img')
+    // Attribut
+    card_btn.setAttribute(
+        'onclick',
+        'showFormContact()'
+    )
+    card_btn.setAttribute(
+        'type',
+        'button'
+    )
+    card_img.setAttribute(
+        'src',
+        `${assetFolder}/Photographers ID Photos/${findPhotographers.portrait}`
+    )
+    card_img.setAttribute(
+        'alt',
+        `${findPhotographers.portrait}`
+    )
+    // content
+    h2.textContent = findPhotographers.name
+    h3.textContent = findPhotographers.city + ', ' + findPhotographers.country
+    p.textContent = findPhotographers.tagline
+    card_btn.textContent = 'Contactez-moi'
+    // gestion class
+    card.className = "card_type_2 grid grid-item-12 grid-item-md-12 grid-item-s-12 flex center"
+    cardBody.className = "grid-col-reverse grid-item-4 card_body"
+    h2.className = "fw400 fs0 secondary"
+    h3.className = "fw500 primary fs2"
+    p.className = "fw300 fs2b"
+    card_btn.className = "btn"
+    cardBody_btn.className = "grid-item-4 p1 flex center"
+    cardBody_img.className = "grid-item-4 p1 flex end"
+    // ajout dans view html
+    photographer.prepend(card)
+    // card.prepend(cardHref)
+    card.append(cardBody_img)
+    cardBody_img.prepend(card_img)
+    card.append(cardBody_btn)
+    cardBody_btn.prepend(card_btn)
+    card.append(cardBody)
+    cardBody.prepend(h2)
+    cardBody.prepend(h3)
+    cardBody.prepend(p)
+    /* ---------Fin Création Dom photographer------*/
+    // 
+    // ----------------------------------------------------------------
+    // 
+    /* --------Creation Dom Média ------*/
+    const ArrayFindMedia = []
+    // boucle pour récuperer les element media via l'id et photographerId
+    for (let i = 0; i < media.length; i++) {
+        if (media[i].photographerId == findId) {
+            ArrayFindMedia.push(media[i])
+        }
+    }
+    ArrayFindMedia.forEach(e => {
+        // console.log(e);
+        let like = e.likes
+        const media = document.querySelector('#media')
+        const card = document.createElement('div')
+        const cardBody = document.createElement('div')
+        const cardTitle = document.createElement('p')
+        const card_like = document.createElement('div')
+        const count_like = document.createElement('span')
+        const cardIcon = document.createElement('button')
+        const icon = document.createElement('i')
+        const card_img = document.createElement('img')
+        const card_video = document.createElement('video')
+        if (e.image) {
+            card_img.setAttribute(
+                'src',
+                `${assetFolder}/${findPhotographers.id}/${e.image}`
+            )
+            card_img.setAttribute(
+                'alt',
+                `${e.image}`
+            )
+            card.prepend(card_img)
+        }
+        else if (e.video) {
+            card_video.setAttribute(
+                'src',
+                `${assetFolder}/${findPhotographers.id}/${e.video}`
+            )
+            card_video.setAttribute(
+                'alt',
+                `${e.video}`
+            )
+            card_video.setAttribute(
+                'type',
+                `video/mp4`
+            )
+            card.prepend(card_video)
+        }
+        card.className = "card_type_3 grid-item-4 grid-item-md-6 grid-item-s-12 p1"
+        // cardIcon.className = "check"
+        console.log(e.id);
+        icon.className = "fa-regular fa-heart  fs3 primary"
+        cardIcon.id = "item" + e.id
+        cardBody.className = "card_body flex s-b pt1"
+        count_like.textContent = e.likes
+        cardTitle.className = "primary fw500"
+        cardTitle.textContent = e.title
+        media.append(card)
+        card.append(cardBody)
+        cardBody.append(card_like)
+        cardBody.prepend(cardTitle)
+        card_like.prepend(cardIcon)
+        cardIcon.prepend(icon)
+        card_like.prepend(count_like)  
+
+// Like Média
+        cardIcon.checked = false
+        const input = document.querySelector("#item" + e.id)
+        input.addEventListener('click', () => {
+            if (!input.checked) { //incrementer
+                e.likes++
+                count_like.textContent = e.likes
+                icon.className = " fa-solid fa-heart fs3 primary anim_heart"
+                input.checked = true
+            } else { //décrémenter
+                e.likes--
+                count_like.textContent = e.likes
+                icon.className = " fa-regular fa-heart fs3 primary anim_heart_remove"
+                input.checked = false
+            }
+        })
+
