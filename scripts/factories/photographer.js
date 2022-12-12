@@ -6,21 +6,15 @@ function photographerFactory(data) {
     function getUserCardDOM() {
         const article = document.createElement( 'article' );
         const img = document.createElement( 'img' );
-        img.setAttribute("src", picture)
         const a = document.createElement('a')
         const abody = document.createElement('div')
         const h2 = document.createElement( 'h2' );
         const h3 = document.createElement( 'h3' );
         const h4 = document.createElement( 'h4' );
         const h4price = document.createElement( 'h4' );
-        img.setAttribute(
-            'alt',
-            portrait
-        )
-        a.setAttribute(
-            'href',
-            `../../photographer.html?id=${id}`
-        )
+        img.setAttribute("src", picture)
+        img.setAttribute('alt',portrait)
+        a.setAttribute('href', `../../photographer.html?id=${id}`)
         h2.textContent = name;
         h3.textContent = city+ ', '+country;
         h4.textContent = tagline;

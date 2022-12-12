@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
 @import url("photographer.css");
 @import url("grid.css");
 :root{
@@ -63,10 +64,19 @@ h1 {
     transition: 0.5s;
     text-shadow: 1px 1px var(--primary);
 }
-.photographer_section article img {
+.photographer_section article img{
     height: 200px;
     width: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
-
+.pics_user{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.cardMedia{
+    width: 100%;
+    height: 100vh;
+}

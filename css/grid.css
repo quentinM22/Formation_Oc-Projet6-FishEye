@@ -258,7 +258,7 @@
 /* position */
 .flex{
     display: flex;
-    align-self: center;
+    align-items: center;
 }
 .flex-col{
     display: flex;
