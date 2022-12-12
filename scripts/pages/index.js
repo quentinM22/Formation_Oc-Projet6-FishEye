@@ -1,6 +1,7 @@
 async function getData() {
-    const url = '/data/photographers.json'
-    const data = await fetch(url)
+    const urlGithub = 'https://github.com/quentinM22/Formation_Oc-Projet6-Fisheye/data/photographers.json'
+    // const url = '/data/photographers.json'
+    const data = await fetch(urlGithub)
     .then(res => res.json())
     .then(data => data)
     .catch(error=> error)
