@@ -6,7 +6,12 @@ async function getData() {
     .catch(error=> error)
     return data
 }
+async function init() {
+    const { photographers } = await getData();
+    displayData(photographers);
+};
 
+init();
 async function displayData(photographers) {
     const photographersSection = document.querySelector(".photographer_section");
 
@@ -17,10 +22,5 @@ async function displayData(photographers) {
     });
 };
 
-async function init() {
-    const { photographers } = await getData();
-    displayData(photographers);
-};
 
-init();
 
