@@ -4,7 +4,7 @@ async function getData() {
     const data = await fetch(url)
     .then(res => res.json())
     .then(data => data)
-    .catch(error=> error)
+    .catch(error=> console.log("erreur: " + error))
     return data
 
 }
