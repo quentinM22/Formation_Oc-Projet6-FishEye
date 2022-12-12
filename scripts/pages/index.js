@@ -1,12 +1,10 @@
-async function getPhotographers() {
+async function getData() {
     const url = '/data/photographers.json'
     const data = await fetch(url)
     .then(res => res.json())
     .then(data => data)
     .catch(error=> error)
-    // const data = res.json()
     return data
-   
 }
 
 async function displayData(photographers) {
@@ -20,7 +18,7 @@ async function displayData(photographers) {
 };
 
 async function init() {
-    const { photographers } = await getPhotographers();
+    const { photographers } = await getData();
     displayData(photographers);
 };
 
