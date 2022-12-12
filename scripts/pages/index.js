@@ -1,7 +1,9 @@
 async function getPhotographers() {
-    const res = await fetch('../../data/photographers.json')
-    const data = res.json()
-    console.log(data);
+    const data = await fetch('../../data/photographers.json')
+    .then(res => res.json())
+    .then(data => data)
+    .catch(error=> error)
+    // const data = res.json()
     return data
    
 }
