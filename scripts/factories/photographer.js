@@ -14,7 +14,7 @@ function photographerFactory(data) {
         const h4price = document.createElement( 'h4' );
         img.setAttribute("src", picture)
         img.setAttribute('alt',portrait)
-        a.setAttribute('href', `../../photographer.html?id=${id}`)
+        a.setAttribute('href', `photographer.html?id=${id}`)
         h2.textContent = name;
         h3.textContent = city+ ', '+country;
         h4.textContent = tagline;
