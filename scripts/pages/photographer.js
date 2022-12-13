@@ -1,6 +1,8 @@
 //Mettre le code JavaScript lié à la page photographer.html
 async function getData() {
-    const url = '/data/photographers.json'
+    // const urlWithGitHub = 'https://quentinm22.github.io/Formation_Oc-Json_data/photographers.json'
+    // return await fetch(urlWithGitHub)
+    const url = '../data/photographers.json'
     return await fetch(url)
     .then(res => res.json())
     .then(data => data)
