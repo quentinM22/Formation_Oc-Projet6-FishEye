@@ -151,3 +151,21 @@ if (url != -1) {
 // console.log("params "+ params);
 // params.get("id=")
 // console.log(params.get("id"));
+
+
+
+  // const input = document.querySelector(`#item${id}`)
+    // console.log(input);
+    // input.addEventListener('click', () => {
+    //     if (!input.checked) { //incrementer
+    //         likes++
+    //         count_like.textContent = likes
+    //         icon.className = " fa-solid fa-heart fs3 primary anim_heart"
+    //         input.checked = true
+    //     } else { //décrémenter
+    //         likes--
+    //         count_like.textContent = likes
+    //         icon.className = " fa-regular fa-heart fs3 primary anim_heart_remove"
+    //         input.checked = false
+    //     }
+    // })

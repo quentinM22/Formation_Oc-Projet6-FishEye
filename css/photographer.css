@@ -85,3 +85,13 @@ form input {
     height: 300px;
     object-fit: cover;
 }
+.btn_like{
+    background: none;
+    border: none;
+}
+.btn_like:hover{
+    cursor: pointer;
+}
+.btn_like>i{
+    font-size: 1rem;
+}

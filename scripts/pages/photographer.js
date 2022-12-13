@@ -17,16 +17,15 @@ async function  displayPhotographers(photographer) {
   
 };
 
-async function displayData(media) {
+async function displayMedia(media) {
     const mediasSection = document.querySelector(".media_section");
 
     media.forEach((media) => {
         const mediaModel = mediaFactory(media);
-        
         const mediaCardDOM = mediaModel.getMediaCardDOM();
         mediasSection.appendChild(mediaCardDOM);
     });
-    // console.log(media);
+    console.log(media);
 };
 
 
@@ -48,7 +47,7 @@ async function init() {
     
     // console.log(findMedia);
     // console.log(findPhotographer);
-    displayData(findMedia);
+    displayMedia(findMedia);
     displayPhotographers(findPhotographer)
 };
 

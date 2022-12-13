@@ -37,13 +37,13 @@ function mediaFactory(data) {
        img.className = "media"
        vod.className = "media"
        card.className = ""
+       cardIcon.className = "btn_like"
        cardIcon.id = "item" + id
        count_like.textContent = likes
        icon.className = "fa-regular fa-heart  fs3 primary"
        article.appendChild(card)
        if(image){
         // console.log(image);
-        
         img.setAttribute('src', `${picture}/${image}`)
         img.setAttribute('alt', `${image}`)
         card.appendChild(img)
@@ -57,24 +57,12 @@ function mediaFactory(data) {
        card_like.appendChild(count_like)
        card_like.appendChild(cardIcon)
        cardIcon.appendChild(icon)
-      
-       const input = document.querySelector(`#item${id}`)
-       console.log(input);
-    //    input.addEventListener('click', () => {
-    //        if (!input.checked) { //incrementer
-    //            likes++
-    //            count_like.textContent = likes
-    //            icon.className = " fa-solid fa-heart fs3 primary anim_heart"
-    //            input.checked = true
-    //        } else { //décrémenter
-    //            likes--
-    //            count_like.textContent = likes
-    //            icon.className = " fa-regular fa-heart fs3 primary anim_heart_remove"
-    //            input.checked = false
-    //        }
-    //    })
+  
+     
 
         return (article);
     }
+        
+  
     return { getMediaCardDOM }
 }
