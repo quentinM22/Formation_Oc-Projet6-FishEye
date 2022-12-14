@@ -1,6 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
 @import url("photographer.css");
 @import url("grid.css");
+@import url("./anim.css");
 :root{
     /* Color */
     --primary: #901C1C;

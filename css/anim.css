@@ -1,0 +1,11 @@
+.anim_heart{
+    animation:heartSmooth 1s ease-in-out ;
+}
+
+@keyframes heartSmooth{
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
