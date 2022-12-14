@@ -85,6 +85,11 @@ form input {
     height: 300px;
     object-fit: cover;
 }
+.media:hover{
+    transform:scale(1.02);
+    box-shadow: -5px 5px 1px  var(--secondary);
+    
+}
 .btn_like{
     background: none;
     border: none;
