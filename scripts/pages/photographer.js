@@ -27,16 +27,17 @@ async function displayMedia(media, likes) {
 function like(event) {
     const target = event.currentTarget;
     const targetHeart = target.querySelector('#targetHeart')
+    let newLike = parseInt(target.textContent)
     if ( !target.checked ) { //Incrementation
         target.checked = true
         targetHeart.className = " fa-solid fa-heart fs3 primary anim_heart"
-        const newLike =  parseInt(target.textContent)+1
+        newLike++
         target.querySelector("#btn_like").textContent = newLike;
         
     }else{ //Décrementation
         target.checked = false
         targetHeart.className = " fa-regular fa-heart fs3 primary anim_heart"
-        const newLike =  parseInt(target.textContent)-1
+        newLike--
         target.querySelector("#btn_like").textContent = newLike;
     }
     updateTotalLikes();
