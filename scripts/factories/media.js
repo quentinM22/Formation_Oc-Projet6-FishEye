@@ -46,14 +46,17 @@ function mediaFactory(data, otherData) {
         card.className = ""
         card_like.className = "flex center s-b p05"
         count_like.className = "fs16 fw700 p05 primary"
+        count_like.id = "btn_like"
         titlecard.className = 'primary fw700'
         cardIcon.className = "btn_like "
         icon.className = "fa-regular fa-heart  fs3 primary"
         cardIcon.id = `item${id}`
+        icon.id = 'targetHeart'
         count_like.textContent = likes
         titlecard.textContent = title
         allLike.textContent = totalLikes + " "
 
+        cardIcon.setAttribute('onclick', 'like(event)')
         article.appendChild(card)
         card.appendChild(media)
         // media image ou video
@@ -72,26 +75,7 @@ function mediaFactory(data, otherData) {
         cardIcon.appendChild(count_like)
         cardIcon.appendChild(icon)    
       
-        // Gestion Like
-        cardIcon.checked = false
-        cardIcon.addEventListener('click', ()=>{
-            if (!cardIcon.checked) { //incrementer
-                cardIcon.checked = true
-                likes++
-                totalLikes++
 
-                icon.className = " fa-solid fa-heart fs3 primary anim_heart"
-            } else{ //décrémenter
-                cardIcon.checked = false
-                likes--
-                totalLikes--
-
-                icon.className = " fa-regular fa-heart fs3 primary"
-            }
-            count_like.textContent = likes
-            allLike.textContent = totalLikes + " "
-         
-        })
         // // modal média
         media.addEventListener('click', ()=>{
             

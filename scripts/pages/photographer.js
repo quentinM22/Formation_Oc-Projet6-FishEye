@@ -23,7 +23,31 @@ async function displayMedia(media, likes) {
         mediasSection.appendChild(mediaCardDOM);
     });
 };
+// Gestion Like
+function like(event) {
+    const target = event.currentTarget;
+    const targetHeart = target.querySelector('#targetHeart')
+    if ( !target.checked ) {
+        target.checked = true
+        targetHeart.className = " fa-solid fa-heart fs3 primary anim_heart"
+        target.querySelector("#btn_like").textContent = parseInt(target.textContent)+1;
+        
+    }else{
+        target.checked = false
+        targetHeart.className = " fa-regular fa-heart fs3 primary anim_heart"
+        target.querySelector("#btn_like").textContent = parseInt(target.textContent)-1;
+    }
+    updateTotalLikes();
+}
+async function updateTotalLikes() {
+    const likes = document.querySelectorAll("#btn_like");
+    const totalLikesNumber = document.querySelector(".allLikes");
 
+    let totalLikes = 0;
+    likes.forEach( like => totalLikes += parseInt(like.textContent) )
+
+    totalLikesNumber.textContent = totalLikes;
+}
 
 //Gestion des donnée
 async function init() {

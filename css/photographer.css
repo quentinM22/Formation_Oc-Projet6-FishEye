@@ -109,11 +109,10 @@ form input {
     padding-left: 1rem;
     padding-right: 1rem;
     bottom: 0;
-    left: 80%;
-    width: 10%;
+    left: 60%;
+    width: 20%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    height: 60px;   /* Height of the footer */
     background: var(--secondary);
 
 }
