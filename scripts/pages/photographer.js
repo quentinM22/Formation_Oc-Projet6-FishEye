@@ -36,7 +36,7 @@ function like(event) {
     }else{ //Décrementation
         target.checked = false
         targetHeart.className = " fa-regular fa-heart fs3 primary anim_heart"
-        const newLike =  parseInt(target.textContent)+1
+        const newLike =  parseInt(target.textContent)-1
         target.querySelector("#btn_like").textContent = newLike;
     }
     updateTotalLikes();
