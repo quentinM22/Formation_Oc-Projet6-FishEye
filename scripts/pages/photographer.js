@@ -27,15 +27,17 @@ async function displayMedia(media, likes) {
 function like(event) {
     const target = event.currentTarget;
     const targetHeart = target.querySelector('#targetHeart')
-    if ( !target.checked ) {
+    if ( !target.checked ) { //Incrementation
         target.checked = true
         targetHeart.className = " fa-solid fa-heart fs3 primary anim_heart"
-        target.querySelector("#btn_like").textContent = parseInt(target.textContent)+1;
+        const newLike =  parseInt(target.textContent)+1
+        target.querySelector("#btn_like").textContent = newLike;
         
-    }else{
+    }else{ //Décrementation
         target.checked = false
         targetHeart.className = " fa-regular fa-heart fs3 primary anim_heart"
-        target.querySelector("#btn_like").textContent = parseInt(target.textContent)-1;
+        const newLike =  parseInt(target.textContent)+1
+        target.querySelector("#btn_like").textContent = newLike;
     }
     updateTotalLikes();
 }
@@ -46,7 +48,7 @@ async function updateTotalLikes() {
     let totalLikes = 0;
     likes.forEach( like => totalLikes += parseInt(like.textContent) )
 
-    totalLikesNumber.textContent = totalLikes;
+    totalLikesNumber.textContent = totalLikes + " ";
 }
 
 //Gestion des donnée

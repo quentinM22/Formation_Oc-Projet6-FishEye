@@ -23,7 +23,7 @@ function photographerFactory(data) {
 
 function mediaFactory(data, otherData) {
 
-    let { id, photographerId, title, price, date, likes, image, video } = data;
+    const { id, photographerId, title, likes, image, video } = data;
     let totalLikes = otherData;
     const picture = `assets/media/${photographerId}`;
     function getMediaCardDOM() {
