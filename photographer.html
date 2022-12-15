@@ -30,6 +30,12 @@
     </div>
 
     <div class="media_section grid p2"></div>
+    <div class="cardFixed">
+      <div>
+      <span class="allLikes"></span><i class="fa-solid fa-heart"></i>
+    </div>
+    <span class="pricePerDay"></span>
+    </div>
   </main>
   <div id="contact_modal">
     <div class="modal">
@@ -46,6 +52,17 @@
       </form>
     </div>
   </div>
+  
+  <div id="media_modal" style="display: none;">
+    <div style="margin: 5rem;">
+      <header>  
+        <h2>img modal</h2>
+        <i class="fa-solid fa-xmark dark-gray " id="closeModal"></i>
+      </header>
+      <section id="modalBody"></section>
+    </div>
+  </div>
+
   <script src="scripts/factories/media.js"></script>
   <script src="scripts/pages/photographer.js"></script>
   <script src="scripts/utils/contactForm.js"></script>

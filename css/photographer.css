@@ -101,3 +101,19 @@ form input {
 .btn_like>i{
     font-size: 1rem;
 }
+.cardFixed{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    bottom: 0;
+    left: 80%;
+    width: 10%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 60px;   /* Height of the footer */
+    background: var(--secondary);
+
+}
