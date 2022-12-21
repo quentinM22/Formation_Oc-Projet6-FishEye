@@ -2,7 +2,6 @@
 function photographerFactory(data) {
 
     const { id, name, portrait, city, country, tagline, price } = data;
-    // console.log({ id, name, portrait, city, country, tagline, price });
     const picture = `assets/photographers/${portrait}`;
 
     function getPhotographerCardDOM() {
@@ -25,91 +24,63 @@ function mediaFactory(data, otherData) {
 
     const { id, photographerId, title, likes, image, video } = data;
     let totalLikes = otherData;
+    let media = null
     const picture = `assets/media/${photographerId}`;
-    function getMediaCardDOM() {
 
+    function getMediaCardDOM() {
+        /* Création Dom */
         const allLike = document.querySelector('.allLikes')
-        const article = document.createElement('article')
-        const card = document.createElement('div')
-        const media = document.createElement('div')
-        const img = document.createElement('img')
-        const vod = document.createElement('video')
-        const card_like = document.createElement('div')
-        const titlecard = document.createElement('h3')
-        const count_like = document.createElement('span')
-        const cardIcon = document.createElement('button')
-        const icon = document.createElement('i')
-        
-        article.className = "card grid-item-4 grid-item-md-6 grid-item-s-12 pt1"
-        img.className = "media"
-        vod.className = "media"
-        card.className = ""
-        card_like.className = "flex center s-b p05"
-        count_like.className = "fs16 fw700 p05 primary"
-        count_like.id = "btn_like"
-        titlecard.className = 'primary fw700'
-        cardIcon.className = "btn_like "
-        icon.className = "fa-regular fa-heart  fs3 primary"
-        cardIcon.id = `item${id}`
-        icon.id = 'targetHeart'
-        count_like.textContent = likes
-        titlecard.textContent = title
         allLike.textContent = totalLikes + " "
 
+        const article = document.createElement('article')
+        article.className = "media card grid-item-4 grid-item-md-6 grid-item-s-12 pt1"
+
+        const card_like = document.createElement('div')
+        card_like.className = "flex center s-b p05"
+
+        const titlecard = document.createElement('h3')
+        titlecard.className = 'primary fw700'
+        titlecard.textContent = title
+
+        const count_like = document.createElement('span')
+        count_like.className = "fs16 fw700 p05 primary"
+        count_like.id = "btn_like"
+        count_like.textContent = likes
+
+        const cardIcon = document.createElement('button')
+        cardIcon.className = "btn_like "
         cardIcon.setAttribute('onclick', 'like(event)')
-        article.appendChild(card)
-        card.appendChild(media)
+
+        const icon = document.createElement('i')
+        icon.id = 'targetHeart'
+        icon.className = "fa-regular fa-heart  fs3 primary"
+
         // media image ou video
         if (image) {
-            img.setAttribute('src', `${picture}/${image}`)
-            img.setAttribute('alt', `${image}`)
-            media.appendChild(img)
+            media = document.createElement('img')
+            media.setAttribute('src', `${picture}/${image}`)
+            media.setAttribute('alt', `${image}`)
         } else if (video) {
-            vod.setAttribute('src', `${picture}/${video}`)
-            vod.setAttribute('type', `video/mp4`)
-            media.appendChild(vod)
+            media = document.createElement('video')
+            media.setAttribute('src', `${picture}/${video}`)
+            media.setAttribute('type', `video/mp4`)
+            media.setAttribute("preload", "metadata")
         }
-        card.appendChild(card_like)
+        media.setAttribute('onclick', 'show(event)')
+        media.setAttribute("tabindex", 0);
+        media.className = "thmb"
+        // media.id = "media"
+
+        /* Mise en place de la view */
+        article.appendChild(media)
+        article.appendChild(card_like)
         card_like.appendChild(titlecard)
         card_like.appendChild(cardIcon)
         cardIcon.appendChild(count_like)
-        cardIcon.appendChild(icon)    
-      
-
-        // // modal média
-        media.addEventListener('click', ()=>{
-            
-            console.log();
-            const mediaModal = document.querySelector('#media_modal')
-            const main = document.querySelector('#main')
-            const modalBody = document.querySelector('#modalBody')
-            main.style.display = 'none'
-            mediaModal.style.display = 'block'
-            modalBody.textContent = id
-            const img = document.createElement('img')
-            const vod = document.createElement('video')
-            if (image) {
-                img.setAttribute('src', `${picture}/${image}`)
-                img.setAttribute('alt', `${image}`)
-                img.style.width = ' 500px'
-                img.style.height = '500px'
-                modalBody.appendChild(img)
-            }else if (video) {
-                vod.setAttribute('src', `${picture}/${video}`)
-                vod.setAttribute('type', `video/mp4`)
-                modalBody.appendChild(vod)
-            }
-            
-            const closeModal = document.querySelector('#closeModal')
-            closeModal.addEventListener('click', ()=>{
-               mediaModal.style.display = 'none' 
-               main.style.display = 'block'
-            })
-        })
-       
+        cardIcon.appendChild(icon)
         return (article);
     }
-    
-    return {getMediaCardDOM }
+
+    return { getMediaCardDOM }
 }
 

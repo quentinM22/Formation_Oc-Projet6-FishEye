@@ -11,9 +11,12 @@
 
 }
 *{
-    max-width: 1400px;
+    
     color: black;
     box-sizing: border-box;
+}
+html{
+    max-width: 1400px;
 }
 @media screen and (min-width:1400px) {
     html{
