@@ -14,10 +14,12 @@ async function  displayPhotographers(photographer) {
 
 
 
-async function displayMedia(media, likes) {
+async function displayMedia(medias, likes) {
     const mediasSection = document.querySelector(".media_section");
-    media.forEach((media) => { //boucle séparation media via tableau pré trier en amont
-        const mediaModel = mediaFactory(media, likes); //Envoi data media dans Factories>media
+    medias.forEach((media) => { //boucle séparation media via tableau pré trier en amont
+        let indexMedia = null
+        indexMedia = medias.indexOf(media)
+        const mediaModel = mediaFactory(media, likes, indexMedia); //Envoi data media dans Factories>media
         //Creation du Dom dans mediaSection 
         const mediaCardDOM = mediaModel.getMediaCardDOM();
         mediasSection.appendChild(mediaCardDOM);
@@ -35,14 +37,14 @@ async function init() {
     const allLikes = [] //Récuperation de tout les likes pour les additionnés
     let total = 0
     //Boucle recuperation média
-    media.forEach(e => {
+    media.forEach((e) => {
         if(e.photographerId == targetParams){
             findMedia.push(e)
             allLikes.push(e.likes)
             total += e.likes //Sommes de touts les likes
         }
     })
-    
+
     //Envoi data dans les différent display
     displayMedia(findMedia, total);
     displayPhotographers(findPhotographer)

@@ -6,25 +6,32 @@ function photographerFactory(data) {
 
     function getPhotographerCardDOM() {
         const userName = document.querySelector('#photographeName')
-        const userLocation = document.querySelector('#photographeLocation')
-        const userTagline = document.querySelector('#photographeTagline')
-        const userImg = document.querySelector('#photographeImg')
-        const pricePerDay = document.querySelector('.pricePerDay')
-        pricePerDay.textContent = `${price}€/Jour`
         userName.textContent = name
+        
+        const userLocation = document.querySelector('#photographeLocation')
         userLocation.textContent = city + ", " + country
+        
+        const userTagline = document.querySelector('#photographeTagline')
         userTagline.textContent = tagline
+        
+        const userImg = document.querySelector('#photographeImg')
         userImg.setAttribute('src', picture)
         userImg.setAttribute('alt', portrait)
+        
+        const pricePerDay = document.querySelector('.pricePerDay')
+        pricePerDay.textContent = `${price}€/Jour`
     }
     return { getPhotographerCardDOM }
 }
 
-function mediaFactory(data, otherData) {
+function mediaFactory(data, otherData, index) {
 
     const { id, photographerId, title, likes, image, video } = data;
     let totalLikes = otherData;
     let media = null
+    let mediaSlide = null
+
+    
     const picture = `assets/media/${photographerId}`;
 
     function getMediaCardDOM() {
@@ -39,6 +46,7 @@ function mediaFactory(data, otherData) {
         card_like.className = "flex center s-b p05"
 
         const titlecard = document.createElement('h3')
+        titlecard.id = 'titleCard'
         titlecard.className = 'primary fw700'
         titlecard.textContent = title
 
@@ -60,13 +68,20 @@ function mediaFactory(data, otherData) {
             media = document.createElement('img')
             media.setAttribute('src', `${picture}/${image}`)
             media.setAttribute('alt', `${image}`)
+            mediaSlide = document.createElement('img')
+            mediaSlide.setAttribute('src', `${picture}/${image}`)
+            mediaSlide.setAttribute('alt', `${image}`)
         } else if (video) {
             media = document.createElement('video')
             media.setAttribute('src', `${picture}/${video}`)
             media.setAttribute('type', `video/mp4`)
             media.setAttribute("preload", "metadata")
+            mediaSlide = document.createElement('video')
+            mediaSlide.setAttribute('src', `${picture}/${video}`)
+            mediaSlide.setAttribute('type', `video/mp4`)
+            mediaSlide.setAttribute("preload", "metadata")
         }
-        media.setAttribute('onclick', 'show(event)')
+        media.setAttribute('onclick', `openModal();currentSlide(${index})`)
         media.setAttribute("tabindex", 0);
         media.className = "thmb"
         // media.id = "media"
@@ -78,6 +93,16 @@ function mediaFactory(data, otherData) {
         card_like.appendChild(cardIcon)
         cardIcon.appendChild(count_like)
         cardIcon.appendChild(icon)
+
+        // modal Slides
+        const slides = document.querySelector('.slides')
+        const mySlides = document.createElement('div')
+        const p = document.createElement('p')
+        mySlides.className = "mySlides"
+        mediaSlide.className = "thmb-full"
+        slides.appendChild(mySlides)
+        mySlides.appendChild(mediaSlide)
+
         return (article);
     }
 
