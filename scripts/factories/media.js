@@ -79,7 +79,7 @@ function mediaFactory(data, otherData, index) {
             mediaSlide = document.createElement('video')
             mediaSlide.setAttribute('src', `${picture}/${video}`)
             mediaSlide.setAttribute('type', `video/mp4`)
-            mediaSlide.setAttribute("preload", "metadata")
+            mediaSlide.setAttribute("controls","")
         }
         media.setAttribute('onclick', `openModal();currentSlide(${index})`)
         media.setAttribute("tabindex", 0);
@@ -100,8 +100,10 @@ function mediaFactory(data, otherData, index) {
         const p = document.createElement('p')
         mySlides.className = "mySlides"
         mediaSlide.className = "thmb-full"
+        p.textContent = title
         slides.appendChild(mySlides)
         mySlides.appendChild(mediaSlide)
+        mySlides.appendChild(p)
 
         return (article);
     }
