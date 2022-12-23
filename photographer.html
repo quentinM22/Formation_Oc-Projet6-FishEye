@@ -29,6 +29,20 @@
       </div>
 
     </div>
+    
+    <div>
+      <h2>Trier Par</h2>
+      <div class="dropdown">
+        <a onclick="dropdown()" class="dropbtn">Popularité<i class="chevron fa-solid fa-chevron-down"></i></a>
+        <div id="myDropdown" class="dropdown-content">
+          <hr>
+          <a href="#" id="date">Date</a>
+          <hr>
+          <a href="#" id="title">Titre</a>
+          <a href="#" id="popular">Popularité</a>
+        </div>
+      </div> 
+    </div>
 
     <div class="media_section grid p2"></div>
     <div class="cardFixed">
@@ -49,22 +63,22 @@
         <div>
           <div class="formData">
             <label>Prénom</label>
-            <input  class="input" type="text" id="first" >
+            <input class="input" type="text" id="first">
             <span class="msg"></span>
           </div>
           <div class="formData">
             <label>Nom</label>
-            <input  class="input" type="text" id="last" >
+            <input class="input" type="text" id="last">
             <span class="msg"></span>
           </div>
           <div class="formData">
             <label>Email</label>
-            <input  class="input" type="email" id="email" >
+            <input class="input" type="text" id="email">
             <span class="msg"></span>
           </div>
           <div class="formData">
             <label>Votre message</label>
-            <textarea class="input" cols="98" rows="6" id="msg" ></textarea>
+            <textarea class="input" cols="98" rows="6" id="msg"></textarea>
             <span class="msg"></span>
           </div>
         </div>
@@ -88,6 +102,7 @@
   <script src="scripts/factories/media.js"></script>
   <script src="scripts/pages/photographer.js"></script>
   <script src="scripts/utils/like.js"></script>
+  <script src="scripts/utils/dropdown.js"></script>
   <script src="scripts/utils/contactForm.js"></script>
   <script src="scripts/utils/modalImg.js"></script>
 </body>

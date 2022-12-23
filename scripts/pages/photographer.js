@@ -13,10 +13,37 @@ async function  displayPhotographers(photographer) {
 };
 
 
+const mediasSection = document.querySelector(".media_section");
+const titleFilters = document.querySelector('#title')
+const dateFilters = document.querySelector('#date')
+const popularFilters = document.querySelector('#popular')
+
+
+ function sort_array_by(medias, name) {
+        mediasSection.innerHTML = ""
+        medias.sort((p1, p2)=>(p1[name] > p2[name])? 1 : (p1[name] < p2[name])? -1 : 0)
+         return medias
+     }
 
 async function displayMedia(medias, likes) {
-    const mediasSection = document.querySelector(".media_section");
+    
+    // Filtres
+    titleFilters.addEventListener("click", ()=>{
+        let array = sort_array_by(medias, "title")
+        displayMedia(array, likes)
+    })
+    dateFilters.addEventListener("click", ()=>{
+        let array = sort_array_by(medias, "date")
+        displayMedia(array, likes)
+    })
+    popularFilters.addEventListener("click", ()=>{
+        let array = sort_array_by(medias, 'likes')
+        displayMedia(array, likes)
+    })
+    
+
     medias.forEach((media) => { //boucle séparation media via tableau pré trier en amont
+        
         let indexMedia = null
         indexMedia = medias.indexOf(media)
         const mediaModel = mediaFactory(media, likes, indexMedia); //Envoi data media dans Factories>media
@@ -51,3 +78,5 @@ async function init() {
 };
 
 init();
+
+
