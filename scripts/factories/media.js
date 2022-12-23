@@ -105,7 +105,7 @@ function mediaFactory(data, otherData, index) {
         mySlides.appendChild(mediaSlide)
         mySlides.appendChild(p)
 
-        return (article);
+        return article;
     }
 
     return { getMediaCardDOM }

@@ -14,6 +14,7 @@ async function  displayPhotographers(photographer) {
 
 
 const mediasSection = document.querySelector(".media_section");
+const slides = document.querySelector('.slides')
 const titleFilters = document.querySelector('#title')
 const dateFilters = document.querySelector('#date')
 const popularFilters = document.querySelector('#popular')
@@ -21,6 +22,7 @@ const popularFilters = document.querySelector('#popular')
 
  function sort_array_by(medias, name) {
         mediasSection.innerHTML = ""
+        slides.innerHTML = ""
         medias.sort((p1, p2)=>(p1[name] > p2[name])? 1 : (p1[name] < p2[name])? -1 : 0)
          return medias
      }
