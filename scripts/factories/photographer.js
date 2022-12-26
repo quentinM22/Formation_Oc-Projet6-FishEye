@@ -9,10 +9,11 @@ function photographerFactory(data) {
 
         const img = document.createElement('img');
         img.setAttribute("src", picture)
-        img.setAttribute('alt', portrait)
+        img.setAttribute('alt', `lien vers la pages de ${name}`)
 
         const a = document.createElement('a')
         a.setAttribute('href', `photographer.html?id=${id}`)
+        a.setAttribute('role', `link`)
         a.className = "grid-col flex-col center"
 
         const abody = document.createElement('div')
@@ -24,7 +25,7 @@ function photographerFactory(data) {
 
         const h3 = document.createElement('h3');
         h3.textContent = city + ', ' + country;
-        h3.className = "fw400 fs13 primary m0"
+        h3.className = "fw400 fs24 primary m0"
 
         const h4 = document.createElement('h4');
         h4.textContent = tagline;
@@ -32,7 +33,7 @@ function photographerFactory(data) {
 
         const h4price = document.createElement('h4');
         h4price.textContent = `${price}€/jour`
-        h4price.className = 'dark-gray fw400 fs9 m0 mb1'
+        h4price.className = 'dark-gray fw400 fs13 m0 mb1'
 
         article.appendChild(a);
         a.appendChild(img);

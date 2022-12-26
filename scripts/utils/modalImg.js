@@ -1,9 +1,31 @@
+let IsLightboxKeyListenerActive = false;
+document.addEventListener( 'keydown',
+    function (event) {
+        IsLightboxKeyListenerActive ? handleLightboxKeyDown(event) : undefined;
+    }
+);
+function handleLightboxKeyDown(event) {
+  switch (event.key) {
+      case "ArrowLeft":
+        plusSlides(-1)
+          break;
+      case "ArrowRight":
+        plusSlides(+1)
+          break;
+      case "Escape":
+        closeModal();
+          break;
+  }
+}
+
 function openModal() {
     document.querySelector(".mediaModal").style.display = "block";
+    document.querySelector("main").style.display = "none"
   }
   
   function closeModal() {
     document.querySelector(".mediaModal").style.display = "none";
+    document.querySelector("main").style.display = "block"
   }
   
   let slideIndex = null;
@@ -23,5 +45,7 @@ function openModal() {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    IsLightboxKeyListenerActive = true
     slides[slideIndex - 1].style.display = "block";
   }
+  

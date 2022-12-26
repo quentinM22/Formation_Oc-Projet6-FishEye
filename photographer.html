@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -12,50 +12,48 @@
 
 <body>
   <header>
-    <a href="/"><img src="assets/images/logo.png" class="logo" /></a>
+    <a href="/"><img src="assets/images/logo.png" class="logo" alt="Lien - accueil"/></a>
   </header>
   <main id="main">
-    <div class="photograph-header grid flex  p1">
+    <section class="photograph-header grid flex  p1">
       <div class="grid-item-4 grid-item-md-12 ">
         <h1 id="photographeName" class="fs64 fw700 secondary m0"></h1>
         <h2 id="photographeLocation" class="fs24 fw400 primary"></h2>
         <h3 id="photographeTagline" class="fs18 fw400 dark-gray"></h3>
       </div>
       <div class="grid-item-4 grid-item-md-12 flex center">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <button class="contact_button" onclick="displayModal()" aria-haspopup="true" aria-expanded="false">Contactez-moi</button>
       </div>
-      <div class="grid-item-4 grid-item-md-12 flex center">
-        <img id='photographeImg' class="pics_user" src="" alt="">
+      <div class="pics_users grid-item-4 grid-item-md-12 flex center">
       </div>
-
-    </div>
-    
-    <div>
+    </section>
+    <!-- dropdown -->
+    <section>
       <h2>Trier Par</h2>
       <div class="dropdown">
-        <a onclick="dropdown()" class="dropbtn"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></a>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#" id="date">Date</a>
+        <a onclick="dropdown()" class="dropbtn" role="button"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></a>
+        <div id="myDropdown" class="dropdown-content" role="listbox">
+          <a href="#" id="date" >Date</a>
           <a href="#" id="title">Titre</a>
           <a href="#" id="popular">Popularité</a>
         </div>
       </div> 
-    </div>
+    </section>
 
-    <div class="media_section grid p2"></div>
-    <div class="cardFixed">
+    <section class="media_section grid p2" aria-haspopup="true" aria-expanded="false"></section>
+    <section class="cardFixed">
       <div>
         <span class="allLikes"></span><i class="fa-solid fa-heart"></i>
       </div>
       <span class="pricePerDay"></span>
-    </div>
+    </section>
   </main>
-
+<!-- contact modal -->
   <div id="contact_modal">
     <div class="modal">
       <header>
         <h2>Contactez-moi</h2>
-        <img src="assets/icons/close.svg" onclick="closeModalContact()" />
+        <img src="assets/icons/close.svg" onclick="closeModalContact()" alt="Fermeture modal contact" />
       </header>
       <form>
         <div>
@@ -84,14 +82,14 @@
       </form>
     </div>
   </div>
-
+  <!-- modal carousel media -->
   <div id="myModal" class="mediaModal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <span class="close cursor" onclick="closeModal()" onkeydown="closeModal()">&times;</span>
     <div class="modal-content">
 
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined">&#10094;</a>
       <div class="slides"></div>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="next" onclick="plusSlides(1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined">&#10095;</a>
 
 
     </div>
@@ -99,6 +97,7 @@
 
   <script src="scripts/factories/media.js"></script>
   <script src="scripts/pages/photographer.js"></script>
+  <script src="scripts/utils/handleKeyDown.js"></script>
   <script src="scripts/utils/like.js"></script>
   <script src="scripts/utils/dropdown.js"></script>
   <script src="scripts/utils/contactForm.js"></script>

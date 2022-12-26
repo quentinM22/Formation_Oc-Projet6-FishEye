@@ -3,7 +3,7 @@ function photographerFactory(data) {
 
     const { id, name, portrait, city, country, tagline, price } = data;
     const picture = `assets/photographers/${portrait}`;
-
+    document.title = `Fisheye - photographe ${name}` 
     function getPhotographerCardDOM() {
         const userName = document.querySelector('#photographeName')
         userName.textContent = name
@@ -14,9 +14,14 @@ function photographerFactory(data) {
         const userTagline = document.querySelector('#photographeTagline')
         userTagline.textContent = tagline
         
-        const userImg = document.querySelector('#photographeImg')
-        userImg.setAttribute('src', picture)
-        userImg.setAttribute('alt', portrait)
+        const pics_users = document.querySelector('.pics_users')
+        const pics_user = document.createElement('img')
+        pics_user.setAttribute('src', picture)
+        pics_user.setAttribute('alt', portrait)
+        pics_user.className = 'pics_user'
+
+        pics_users.appendChild(pics_user)
+        
         
         const pricePerDay = document.querySelector('.pricePerDay')
         pricePerDay.textContent = `${price}€/Jour`
