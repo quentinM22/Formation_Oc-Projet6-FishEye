@@ -30,13 +30,13 @@
     <!-- dropdown -->
     <section>
       <h2>Trier Par</h2>
-      <div class="dropdown">
-        <a onclick="dropdown()" class="dropbtn" role="button"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></a>
+      <!-- <div class="dropdown"> -->
+        <button onclick="dropdown()" class="dropbtn" role="button"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></button>
         <div id="myDropdown" class="dropdown-content" role="listbox">
           <a href="#" id="date" >Date</a>
           <a href="#" id="title">Titre</a>
           <a href="#" id="popular">Popularité</a>
-        </div>
+        <!-- </div> -->
       </div> 
     </section>
 
@@ -53,13 +53,13 @@
     <div class="modal">
       <header>
         <h2>Contactez-moi</h2>
-        <img src="assets/icons/close.svg" onclick="closeModalContact()" alt="Fermeture modal contact" />
+        <img src="assets/icons/close.svg" onclick="closeModalContact()"  onkeydown="handleKeyDown(e)?closeModalContact():undefined" alt="" />
       </header>
       <form>
         <div>
           <div class="formData">
             <label>Prénom</label>
-            <input class="input" type="text" id="first">
+            <input class="input" type="text" id="first"   >
             <span class="msg"></span>
           </div>
           <div class="formData">
@@ -84,7 +84,7 @@
   </div>
   <!-- modal carousel media -->
   <div id="myModal" class="mediaModal">
-    <span class="close cursor" onclick="closeModal()" onkeydown="closeModal()">&times;</span>
+    <span class="close cursor" onclick="closeModal()" >&times;</span>
     <div class="modal-content">
 
       <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined">&#10094;</a>

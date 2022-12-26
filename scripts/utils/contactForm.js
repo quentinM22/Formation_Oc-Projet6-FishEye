@@ -1,11 +1,23 @@
+let IsFormContactKeyListenerActive = false;
+document.addEventListener( 'keydown',
+    function (event) {
+        if (event.key === "Escape") {
+            IsFormContactKeyListenerActive ? closeModalContact() : undefined;
+        }
+    }
+);
 const main = document.querySelector('main')
 const modal = document.getElementById("contact_modal");
 function displayModal() {
 	modal.style.display = "block";
+    main.style.display = 'none'
+    IsFormContactKeyListenerActive = true;
 }
 
 function closeModalContact() {
     modal.style.display = "none";
+    main.style.display = 'block'
+    IsFormContactKeyListenerActive = false;
 }
 
 

@@ -95,7 +95,8 @@ form input {
   height: 300px;
   object-fit: cover;
 }
-.thmb:hover {
+.thmb:hover,
+.thmb:focus {
   cursor: pointer;
   transform: scale(1.02);
   box-shadow: -5px 5px 1px var(--secondary);
@@ -165,8 +166,7 @@ form input {
  color: var(--primary);
 }
 
-.slides{
-}
+
 .mySlides {
   display: none;
 }
@@ -238,7 +238,8 @@ form input {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-content a:hover,
+.dropdown-content a:focus {
   background-color: var(--secondary);
   color: black;
 }
