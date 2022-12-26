@@ -34,9 +34,8 @@ const popularFilters = document.querySelector('#popular')
 
 async function displayMedia(medias, likes) {
     if (selectDropdown.textContent === '' ) {
-        let array = sort_array_by(medias, 'likes')
+        sort_array_by(medias, 'likes')
         selectDropdown.textContent = "Popularité"
-        displayMedia(array, likes)
         popularFilters.style.display = 'none'
     }
     // Filtres
