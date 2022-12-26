@@ -15,32 +15,54 @@ async function  displayPhotographers(photographer) {
 
 const mediasSection = document.querySelector(".media_section");
 const slides = document.querySelector('.slides')
+const selectDropdown = document.querySelector('#selectDropdown')
 const titleFilters = document.querySelector('#title')
 const dateFilters = document.querySelector('#date')
 const popularFilters = document.querySelector('#popular')
-
-
+// Filtres
  function sort_array_by(medias, name) {
         mediasSection.innerHTML = ""
         slides.innerHTML = ""
-        medias.sort((p1, p2)=>(p1[name] > p2[name])? 1 : (p1[name] < p2[name])? -1 : 0)
+        if(name === "likes"){
+             medias.sort((p1, p2)=>(p1[name] < p2[name])? 1 : (p1[name] > p2[name])? -1 : 0)
+        }else{
+            medias.sort((p1, p2)=>(p1[name] > p2[name])? 1 : (p1[name] < p2[name])? -1 : 0)
+        }
+       
          return medias
      }
 
 async function displayMedia(medias, likes) {
-    
+    if (selectDropdown.textContent === '' ) {
+        let array = sort_array_by(medias, 'likes')
+        selectDropdown.textContent = "Popularité"
+        displayMedia(array, likes)
+        popularFilters.style.display = 'none'
+    }
     // Filtres
     titleFilters.addEventListener("click", ()=>{
         let array = sort_array_by(medias, "title")
+        selectDropdown.textContent = "Titre"
         displayMedia(array, likes)
+        titleFilters.style.display = 'none'
+        popularFilters.style.display = 'block'
+        dateFilters.style.display = 'block'
     })
     dateFilters.addEventListener("click", ()=>{
         let array = sort_array_by(medias, "date")
+        selectDropdown.textContent = "Date"
         displayMedia(array, likes)
+        dateFilters.style.display = 'none'
+        titleFilters.style.display = 'block'
+        popularFilters.style.display = 'block'
     })
     popularFilters.addEventListener("click", ()=>{
         let array = sort_array_by(medias, 'likes')
+        selectDropdown.textContent = "Popularité"
         displayMedia(array, likes)
+        popularFilters.style.display = 'none'
+        dateFilters.style.display = 'block'
+        titleFilters.style.display = 'block'
     })
     
 

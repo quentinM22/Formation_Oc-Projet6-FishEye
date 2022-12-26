@@ -1,13 +1,1 @@
 
-// const titleFilters = document.querySelector('#title')
-// const dateFilters = document.querySelector('#date')
-// const popularFilters = document.querySelector('#popular')
-// titleFilters.addEventListener("click", ()=>{
-//     medias.sort((p1, p2)=>(p1.title > p2.title)? 1 : (p1.title < p2.title)? -1 : 0)
-// })
-// dateFilters.addEventListener("click", ()=>{
-//     medias.sort((p1, p2)=>(p1.date > p2.date)? 1 : (p1.date < p2.date)? -1 : 0)
-// })
-// popularFilters.addEventListener("click", ()=>{
-//     medias.sort((p1, p2)=>(p1.likes < p2.likes)? 1 : (p1.likes > p2.likes)? -1 : 0)
-// })
