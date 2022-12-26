@@ -33,7 +33,7 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;                                                
     justify-content: space-between;
     align-items: center;
     height: 90px;
@@ -48,22 +48,42 @@ h1 {
     color:var(--primary);
     margin-right: 100px;
 }
-
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 1rem ;
+    /* margin-left: 100px; */
+}
 .logo {
     height: 50px;
-    margin-left: 100px;
+    padding: 0.5rem ;
+    /* margin-left: 100px; */
 }
 
-
-
-.photographer_section article a:hover>img,
-.photographer_section article a:focus>img {
+*:focus{
+    outline: none;
+}
+.photographer_section article a{
+    width: 100%;
+}
+.photographer_section article a:hover>img {
     transform: scale(1.05);
     transition: 0.5s;
     box-shadow: 40px -20px var(--dark-gray);
 
 }
-.photographer_section article a:hover>div>h2,
+.photographer_section article:hover a>div>h2{
+    transform: scale(1.05);
+    transition: 0.5s;
+    text-shadow: 1px 1px var(--primary);
+}
+.photographer_section article a:focus>img{
+    transform: scale(1.05);
+    transition: 0.5s;
+    box-shadow: 40px -20px var(--dark-gray);     
+}   
 .photographer_section article a:focus>div>h2{
     transform: scale(1.05);
     transition: 0.5s;

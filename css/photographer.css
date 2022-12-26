@@ -13,7 +13,6 @@
 
 .photograph-header {
   background-color: #fafafa;
-  /* height: 300px; */
   margin: 0 100px;
 }
 
@@ -194,7 +193,10 @@ form input {
 }
 
 
-.dropbtn {
+.dropbtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -206,20 +208,15 @@ form input {
   border-radius: 5px;
   cursor: pointer;
 }
+.dropbtn>span{
+  color: #fafafa;
+}
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:hover>.chevron{
-  background-color: var(--secondary);
-  color: black;
-} 
-
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -229,7 +226,6 @@ form input {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: rgb(255, 255, 255);
   padding: 12px 16px;
@@ -237,7 +233,6 @@ form input {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover,
 .dropdown-content a:focus {
   background-color: var(--secondary);
@@ -249,8 +244,28 @@ hr{
   margin: 0 auto 0;
   border-radius: 20px;
 }
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 .chevron{
   color: #fafafa;
+}
+
+.btn_like:focus{
+  outline: 1px solid #901c1c;
+  box-shadow: -5px 5px 1px var(--secondary);
+}
+
+.contact_button:hover,
+.contact_button:focus,  
+.dropbtn:hover,
+.dropbtn:focus,
+.dropbtn:focus>span,
+.dropbtn:focus>.chevron {
+  background-color: var(--secondary);
+  color: black;
+} 
+.logo-container:focus,
+.logo-container:hover{
+  border: #901c1c 2px solid;
+  
+  /* border-radius: 25px; */
 }

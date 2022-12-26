@@ -68,6 +68,9 @@ function mediaFactory(data, otherData, index) {
         icon.id = 'targetHeart'
         icon.className = "fa-regular fa-heart  fs3 primary"
 
+        const openCarousel = document.createElement('a')
+        openCarousel.setAttribute('href', '#')
+        openCarousel.setAttribute('onclick', `openModal();currentSlide(${index})`)
         // media image ou video
         if (image) {
             media = document.createElement('img')
@@ -86,14 +89,14 @@ function mediaFactory(data, otherData, index) {
             mediaSlide.setAttribute('type', `video/mp4`)
             mediaSlide.setAttribute("controls","")
         }
-        media.setAttribute('onclick', `openModal();currentSlide(${index})`)
         media.setAttribute("tabindex", 0);
         media.className = "thmb"
         // media.id = "media"
 
         /* Mise en place de la view */
-        article.appendChild(media)
+        article.appendChild(openCarousel)
         article.appendChild(card_like)
+        openCarousel.appendChild(media)
         card_like.appendChild(titlecard)
         card_like.appendChild(cardIcon)
         cardIcon.appendChild(count_like)
