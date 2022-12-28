@@ -26,7 +26,6 @@ const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
 const regexMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 // Elements Globale formulaire
 const form = document.querySelector("form")
-const btnSubmit = document.querySelector(".contact_button")
 // Elements donnees formulaire 
 const first = document.querySelector("#first")
 const last = document.querySelector("#last")

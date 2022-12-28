@@ -10,7 +10,7 @@ async function getData() {
 async function  displayPhotographers(photographer) {
     const photographerModel = photographerFactory(photographer); //Envoi data photogrpaher dans Factories>media
     photographerModel.getPhotographerCardDOM();
-};
+}
 
 
 const mediasSection = document.querySelector(".media_section");
@@ -74,7 +74,7 @@ async function displayMedia(medias, likes) {
         const mediaCardDOM = mediaModel.getMediaCardDOM();
         mediasSection.appendChild(mediaCardDOM);
     });
-};
+}
 
 //Gestion des donnée
 async function init() {
@@ -98,7 +98,7 @@ async function init() {
     //Envoi data dans les différent display
     displayMedia(findMedia, total);
     displayPhotographers(findPhotographer)
-};
+}
 
 init();
 

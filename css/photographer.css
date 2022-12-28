@@ -269,3 +269,12 @@ hr{
   
   /* border-radius: 25px; */
 }
+
+.filters-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.dropdown{
+  margin-left: 0.5rem;
+}

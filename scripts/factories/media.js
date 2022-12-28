@@ -1,7 +1,5 @@
-
 function photographerFactory(data) {
-
-    const { id, name, portrait, city, country, tagline, price } = data;
+    const { name, portrait, city, country, tagline, price } = data;
     const picture = `assets/photographers/${portrait}`;
     document.title = `Fisheye - photographe ${name}` 
     function getPhotographerCardDOM() {
@@ -31,7 +29,7 @@ function photographerFactory(data) {
 
 function mediaFactory(data, otherData, index) {
 
-    const { id, photographerId, title, likes, image, video } = data;
+    const { photographerId, title, likes, image, video } = data;
     let totalLikes = otherData;
     let media = null
     let mediaSlide = null

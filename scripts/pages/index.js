@@ -1,3 +1,4 @@
+
 async function getData() {
     const url = 'data/photographers.json'
     return await fetch(url)
@@ -15,12 +16,12 @@ async function displayData(photographers) {
         const userCardDOM = photographerModel.getUserCardDOM();
         photographersSection.appendChild(userCardDOM);
     });
-};
+}
 
 async function init() {
     const { photographers } = await getData();
     displayData(photographers);
-};
+}
 
 init();
 

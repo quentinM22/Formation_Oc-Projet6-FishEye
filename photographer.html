@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <a href="/" class="logo-container" onclick="(this.href)"><img src="assets/images/logo.png" class="logo" alt="Lien - accueil"/></a>
+    <a href="/" class="logo-container" onclick="(this.hre)"><img src="assets/images/logo.png" class="logo" alt="Lien - accueil"/></a>
   </header>
   <main id="main">
     <section class="photograph-header grid flex  p1">
@@ -28,15 +28,15 @@
       </div>
     </section>
     <!-- dropdown -->
-    <section>
+    <section class="filters-container">
       <h2>Trier Par</h2>
-      <!-- <div class="dropdown"> -->
+      <div class="dropdown">
         <button onclick="dropdown()" class="dropbtn" role="button"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></button>
         <div id="myDropdown" class="dropdown-content" role="listbox">
           <a href="#" id="date" >Date</a>
           <a href="#" id="title">Titre</a>
           <a href="#" id="popular">Popularité</a>
-        <!-- </div> -->
+        </div>
       </div> 
     </section>
 
