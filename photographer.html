@@ -28,10 +28,10 @@
       </div>
     </section>
     <!-- dropdown -->
-    <section class="filters-container">
+    <section class="filters-container pt2 pb3" >
       <h2>Trier Par</h2>
       <div class="dropdown">
-        <button onclick="dropdown()" class="dropbtn" role="button"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></button>
+        <button onclick="dropdown()" class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded=""><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></button>
         <div id="myDropdown" class="dropdown-content" role="listbox">
           <a href="#" id="date" >Date</a>
           <a href="#" id="title">Titre</a>
@@ -40,12 +40,12 @@
       </div> 
     </section>
 
-    <section class="media_section grid p2" aria-haspopup="true" aria-expanded="false"></section>
+    <section class="media_section grid pt1 pb4" aria-haspopup="true" aria-expanded="false"></section>
     <section class="cardFixed">
       <div>
-        <span class="allLikes"></span><i class="fa-solid fa-heart"></i>
+        <span class="allLikes fs24 fw500"></span><i class="fa-solid fa-heart fs24"></i>
       </div>
-      <span class="pricePerDay"></span>
+      <span class="pricePerDay fs24 fw500"></span>
     </section>
   </main>
 <!-- contact modal -->

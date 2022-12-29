@@ -31,11 +31,11 @@ function photographerFactory(data) {
 
         const h4 = document.createElement('h4');
         h4.textContent = tagline;
-        h4.className = 'fs13 fw400 m0 mt1'
+        h4.className = 'fs16 fw400 m0 mt1'
 
         const h4price = document.createElement('h4');
         h4price.textContent = `${price}€/jour`
-        h4price.className = 'dark-gray fw400 fs13 m0 mb1'
+        h4price.className = 'dark-gray fw400 fs16 m0 mb1'
 
         article.appendChild(a);
         a.appendChild(img);

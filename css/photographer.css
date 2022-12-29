@@ -10,10 +10,11 @@
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.767);
 }
-
+main {
+  margin: 0 100px 0 100px;
+}
 .photograph-header {
   background-color: #fafafa;
-  margin: 0 100px;
 }
 
 .contact_button {
@@ -35,7 +36,6 @@
 }
 
 .modal {
-
   border-radius: 5px;
   background-color: #db8876;
   width: 50%;
@@ -114,24 +114,25 @@ form input {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-left: 1rem;
   padding-right: 1rem;
-  bottom: 0;
-  left: 60%;
-  width: 20%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  padding-top: 0.5rem;
+  height: 89px;
+  bottom: -5%;
+  left: 70%;
+  width: 25%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background: var(--secondary);
 }
 
-  
 /* The Modal (background) */
 .mediaModal {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 50px;
   left: 0;
   top: 0;
   width: 100%;
@@ -139,52 +140,49 @@ form input {
   overflow: auto;
   background-color: var(--white);
 }
-.mediaModal>span{
+.mediaModal > span {
   position: relative;
   left: 90%;
   font-size: 3.5rem;
 }
-.mediaModal>span:hover{
+.mediaModal > span:hover {
   cursor: pointer;
- color: var(--primary);
+  color: var(--primary);
 }
-.modal-content{
+.modal-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.modal-content>a{
+.modal-content > a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 25%;
   font-size: 3.5rem;
 }
-.modal-content>a:hover{
- cursor: pointer;
- color: var(--primary);
+.modal-content > a:hover {
+  cursor: pointer;
+  color: var(--primary);
 }
-
 
 .mySlides {
   display: none;
 }
-.thmb-full{
+.thmb-full {
   width: 100%;
   height: 75vh;
 }
 
-
-
-.error-message{
+.error-message {
   color: red;
   font-weight: 300;
-  font-size:small;
+  font-size: small;
 }
-.text-control.input-error{
+.text-control.input-error {
   border: solid 3px red;
 }
-.checkbox-icon.input-error{
+.checkbox-icon.input-error {
   outline: 3px solid red;
 }
 /* */
@@ -192,8 +190,7 @@ form input {
   border: 3px solid green;
 }
 
-
-.dropbtn{
+.dropbtn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -208,7 +205,7 @@ form input {
   border-radius: 5px;
   cursor: pointer;
 }
-.dropbtn>span{
+.dropbtn > span {
   color: #fafafa;
 }
 
@@ -222,7 +219,7 @@ form input {
   position: absolute;
   background-color: var(--primary);
   width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -238,43 +235,43 @@ form input {
   background-color: var(--secondary);
   color: black;
 }
-hr{
+hr {
   color: #fafafa;
   width: 75%;
   margin: 0 auto 0;
   border-radius: 20px;
 }
-.show {display:block;}
-.chevron{
+.show {
+  display: block;
+}
+.chevron {
   color: #fafafa;
 }
 
-.btn_like:focus{
+.btn_like:focus {
   outline: 1px solid #901c1c;
   box-shadow: -5px 5px 1px var(--secondary);
 }
 
 .contact_button:hover,
-.contact_button:focus,  
+.contact_button:focus,
 .dropbtn:hover,
 .dropbtn:focus,
-.dropbtn:focus>span,
-.dropbtn:focus>.chevron {
+.dropbtn:focus > span,
+.dropbtn:focus > .chevron {
   background-color: var(--secondary);
   color: black;
-} 
-.logo-container:focus,
-.logo-container:hover{
-  border: #901c1c 2px solid;
-  
-  /* border-radius: 25px; */
 }
 
-.filters-container{
+.filters-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.dropdown{
+.dropdown {
   margin-left: 0.5rem;
+}
+.input {
+  width: 100%;
+  border-radius: 5px;
 }
