@@ -10,13 +10,14 @@ const main = document.querySelector('main')
 const modal = document.getElementById("contact_modal");
 function displayModal() {
 	modal.style.display = "block";
-    main.style.display = 'none'
+    main.style.position = "fixed"
     IsFormContactKeyListenerActive = true;
+    first.focus()
 }
 
 function closeModalContact() {
     modal.style.display = "none";
-    main.style.display = 'block'
+    main.style.position = ""
     IsFormContactKeyListenerActive = false;
 }
 

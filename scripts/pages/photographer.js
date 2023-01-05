@@ -19,6 +19,7 @@ const selectDropdown = document.querySelector('#selectDropdown')
 const titleFilters = document.querySelector('#title')
 const dateFilters = document.querySelector('#date')
 const popularFilters = document.querySelector('#popular')
+
 // Filtres
  function sort_array_by(medias, name) {
         mediasSection.innerHTML = ""

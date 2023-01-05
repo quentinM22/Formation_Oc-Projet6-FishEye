@@ -1,4 +1,3 @@
-
 async function getData() {
     const url = 'data/photographers.json'
     return await fetch(url)

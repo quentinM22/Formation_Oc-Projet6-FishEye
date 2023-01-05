@@ -3,6 +3,10 @@ function photographerFactory(data) {
     const picture = `assets/photographers/${portrait}`;
     document.title = `Fisheye - photographe ${name}` 
     function getPhotographerCardDOM() {
+        const loaderName = document.querySelector('#loaderName')
+        loaderName.textContent = name
+        const contactName = document.querySelector('#name')
+        contactName.textContent = name
         const userName = document.querySelector('#photographeName')
         userName.textContent = name
         
@@ -15,7 +19,7 @@ function photographerFactory(data) {
         const pics_users = document.querySelector('.pics_users')
         const pics_user = document.createElement('img')
         pics_user.setAttribute('src', picture)
-        pics_user.setAttribute('alt', portrait)
+        pics_user.setAttribute('alt', name)
         pics_user.className = 'pics_user'
 
         pics_users.appendChild(pics_user)
@@ -73,19 +77,21 @@ function mediaFactory(data, otherData, index) {
         if (image) {
             media = document.createElement('img')
             media.setAttribute('src', `${picture}/${image}`)
-            media.setAttribute('alt', `${image}`)
+            media.setAttribute('alt', `${image}, closeup view`)
             mediaSlide = document.createElement('img')
             mediaSlide.setAttribute('src', `${picture}/${image}`)
-            mediaSlide.setAttribute('alt', `${image}`)
+            mediaSlide.setAttribute('alt', `${image}, closeup view`)
         } else if (video) {
             media = document.createElement('video')
             media.setAttribute('src', `${picture}/${video}`)
             media.setAttribute('type', `video/mp4`)
             media.setAttribute("preload", "metadata")
+            media.setAttribute('alt', `${video}, closeup view`)
             mediaSlide = document.createElement('video')
             mediaSlide.setAttribute('src', `${picture}/${video}`)
             mediaSlide.setAttribute('type', `video/mp4`)
             mediaSlide.setAttribute("controls","")
+            mediaSlide.setAttribute('alt', `${video}, closeup view`)
         }
         media.setAttribute("tabindex", 0);
         media.className = "thmb"

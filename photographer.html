@@ -2,7 +2,9 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -11,32 +13,46 @@
 </head>
 
 <body>
+  <div class="loader">
+    <div>
+      <div class="lds-ring"></div>
+    <h1>FishEye</h1>
+    </div>
+    
+    <h2 id="loaderName"></h2>
+  </div>
   <header>
-    <a href="/" class="logo-container" onclick="(this.hre)"><img src="assets/images/logo.png" class="logo" alt="Lien - accueil"/></a>
+    <a href="/" class="logo-container" onclick="(this.hre)"><img src="assets/images/logo.png" class="logo" alt="Fisheye - Home page"/></a>
   </header>
   <main id="main">
     <section class="photograph-header grid flex  p1">
-      <div class="grid-item-4 grid-item-md-12 ">
+      <div class="grid-item-4 grid-item-md-12   grid-item-s-12 flex-col a-start p1">
         <h1 id="photographeName" class="fs64 fw700 secondary m0"></h1>
         <h2 id="photographeLocation" class="fs24 fw400 primary"></h2>
         <h3 id="photographeTagline" class="fs18 fw400 dark-gray"></h3>
       </div>
-      <div class="grid-item-4 grid-item-md-12 flex center">
-        <button class="contact_button" onclick="displayModal()" aria-haspopup="true" aria-expanded="false">Contactez-moi</button>
+      <div class="grid-item-4 grid-item-md-12 grid-item-s-12 flex center p1">
+        <button class="contact_button" onclick="displayModal()" aria-label="Contact me">Contactez-moi</button>
       </div>
-      <div class="pics_users grid-item-4 grid-item-md-12 flex center">
+      <div class="pics_users grid-item-4 grid-item-md-12 grid-item-s-12 flex center p1">
       </div>
     </section>
     <!-- dropdown -->
     <section class="filters-container pt2 pb3" >
       <h2>Trier Par</h2>
       <div class="dropdown">
-        <button onclick="dropdown()" class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded=""><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></button>
-        <div id="myDropdown" class="dropdown-content" role="listbox">
-          <a href="#" id="date" >Date</a>
-          <a href="#" id="title">Titre</a>
-          <a href="#" id="popular">Popularité</a>
-        </div>
+        <button class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded="false"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></button>
+        <ul id="myDropdown" class="dropdown-content" role="listbox" aria-activedescendant="selected">
+          <li>
+          <a href="#" id="date" onclick="closeDropdown()" role="option" aria-labelledby="Order by date"><span>Date</span></a>
+        </li>
+          <li>
+          <a href="#" id="title" onclick="closeDropdown()" role="option" aria-labelledby="Order by title"><span>Titre</span></a>
+        </li>
+          <li>
+          <a href="#" id="popular" onclick="closeDropdown()" role="option" aria-labelledby="Order by popular"><span>Populaire</span></a>
+        </li>
+        </ul>
       </div> 
     </section>
 
@@ -51,25 +67,29 @@
 <!-- contact modal -->
   <div id="contact_modal">
     <div class="modal">
-      <header>
-        <h2>Contactez-moi</h2>
-        <img src="assets/icons/close.svg" onclick="closeModalContact()"  onkeydown="handleKeyDown(e)?closeModalContact():undefined" alt="" />
+      <header class="grid a-baseline">
+        <div  class="grid-item-11 grid-item-md-11 grid-item-s-11 flex-col a-start start">
+          <h2>Contacter-moi</h2>
+          <h2 id="name"></h2>
+        </div>
+           <button class="grid-item-1 grid-item-md-1 grid-item-s-1 flex end" onclick="closeModalContact()"  onkeydown="handleKeyDown(e)?closeModalContact():undefined"><i class="fa-solid fa-xmark"></i></button>
+     
       </header>
-      <form>
+      <form autofocus>
         <div>
-          <div class="formData">
+          <div class="formData" >
             <label>Prénom</label>
-            <input class="input" type="text" id="first"   >
+            <input class="input" type="text" id="first" autofocus/>
             <span class="msg"></span>
           </div>
           <div class="formData">
             <label>Nom</label>
-            <input class="input" type="text" id="last">
+            <input class="input" type="text" id="last"/>
             <span class="msg"></span>
           </div>
           <div class="formData">
             <label>Email</label>
-            <input class="input" type="text" id="email">
+            <input class="input" type="text" id="email"/>
             <span class="msg"></span>
           </div>
           <div class="formData">
@@ -84,12 +104,12 @@
   </div>
   <!-- modal carousel media -->
   <div id="myModal" class="mediaModal">
-    <span class="close cursor" onclick="closeModal()" >&times;</span>
+    <button class="close cursor" onclick="closeModal()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     <div class="modal-content">
 
-      <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined">&#10094;</a>
+      <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></a>
       <div class="slides"></div>
-      <a class="next" onclick="plusSlides(1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined">&#10095;</a>
+      <a class="next" onclick="plusSlides(1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></a>
 
 
     </div>
@@ -98,6 +118,7 @@
   <script src="scripts/factories/media.js"></script>
   <script src="scripts/pages/photographer.js"></script>
   <script src="scripts/utils/handleKeyDown.js"></script>
+  <script src="scripts/utils/animaton.js"></script>
   <script src="scripts/utils/like.js"></script>
   <script src="scripts/utils/dropdown.js"></script>
   <script src="scripts/utils/contactForm.js"></script>

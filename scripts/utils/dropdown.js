@@ -1,16 +1,24 @@
-function dropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-            let openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-} 
 
+const btnDrop = document.querySelector('.dropbtn')
+const myDropdown =  document.querySelector("#myDropdown")
+const chevron = document.querySelector('.chevron')
+function closeDropdown() {
+   myDropdown.classList.toggle("show");
+   btnDrop.setAttribute('aria-expanded', false)
+   chevron.classList.replace('fa-chevron-up',"fa-chevron-down")
+}
+
+
+btnDrop.addEventListener('click', ()=>{
+    myDropdown.classList.toggle("show");
+    if (btnDrop.getAttribute('aria-expanded') == "false") {
+       btnDrop.setAttribute('aria-expanded', true) 
+       chevron.classList.replace('fa-chevron-down',"fa-chevron-up")
+    } else{
+        btnDrop.setAttribute('aria-expanded', false)  
+        chevron.classList.replace('fa-chevron-up',"fa-chevron-down")
+    }
+   
+        
+})
 

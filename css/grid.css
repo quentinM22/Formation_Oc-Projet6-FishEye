@@ -270,6 +270,18 @@
 .end{
     justify-content: flex-end;
 }
+.a-start{
+    align-items: flex-start;
+}
+.a-center{
+    align-items: center;
+}
+.a-end{
+    align-items: flex-end;
+}
+.a-baseline{
+    align-items: baseline;
+}
 .s-b{
     justify-content: space-between;
 }
@@ -327,3 +339,4 @@
 .pb4{
     padding-bottom: 4rem;
 }
+
