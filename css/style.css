@@ -17,6 +17,10 @@
     color: black;
     box-sizing: border-box;
 }
+
+*:focus{
+    outline: none;
+}
 html{
     max-width: 1400px;
 }
@@ -48,6 +52,12 @@ li{
 h1 {
     color:var(--primary);
 }
+
+.text-over{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
 .logo-container {
     display: flex;
     justify-content: center;
@@ -59,20 +69,23 @@ h1 {
     padding: 0.5rem ;
 }
 
-*:focus{
-    outline: none;
-}
-.photographer_section article a{
+/* .photographer_section article a{
     width: 100%;
 }
+.photographer_section article a>div>h2,
+.photographer_section article a>div>h3,
+.photographer_section article a>div>h4{
+    max-width: 100%;
+} */
+
 .photographer_section article a:hover>img {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 0.5s;
     box-shadow: 40px -20px var(--dark-gray);
 
 }
 .photographer_section article:hover a>div>h2{
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 0.5s;
     text-shadow: 1px 1px var(--primary);
 }
@@ -111,8 +124,18 @@ h1 {
   border: #901c1c 2px solid;
 }
 
+
+@media screen and (min-width: 768px)and (max-width: 991px){
+}
+
 @media screen and (max-width: 767px){
     header {
+        flex-direction: column;
         justify-content: center;
+
+    }
+    header>h1{
+        padding-top: 1rem;
+        text-align: center;
     }
 }

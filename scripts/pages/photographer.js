@@ -47,6 +47,7 @@ async function displayMedia(medias, likes) {
         titleFilters.style.display = 'none'
         popularFilters.style.display = 'block'
         dateFilters.style.display = 'block'
+
     })
     dateFilters.addEventListener("click", ()=>{
         let array = sort_array_by(medias, "date")
