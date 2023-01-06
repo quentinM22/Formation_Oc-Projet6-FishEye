@@ -38,7 +38,7 @@ main {
 .modal {
   border-radius: 5px;
   background-color: #db8876;
-  width: 50%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,7 +53,6 @@ main {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .modal header button {
   cursor: pointer;
   background: none;
@@ -71,6 +70,7 @@ main {
   font-size: 64px;
   font-weight: 400;
   text-align: center;
+  text-overflow: ellipsis;
 }
 
 form {
@@ -355,12 +355,43 @@ hr {
     transform: translateX(-50%);
     border-radius: 0; 
   }
+  .modal{
+    width: 100%;
+    padding: 1rem;
+  }
+  .modal>header>div>h2{
+    font-size: 48px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .modal>header>button>i{
+    font-size: 48px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .modal>form>div>.formData>label,
+  .modal>form>div>.formData>.input{
+    font-size: 32px;
+  }
+  .modal>form>div>.formData>input{
+    padding: 5px;
+    height: 50px;
+  }
+  .modal>form>div>.formData>textarea{
+    padding: 5px;
+    height: 90px;
+  }
 }
 
 @media screen and (max-width: 767px){
   main{
     margin: 0;
     padding: 1rem;
+  }
+  header{
+    margin: 1rem auto;
   }
   .photograph-header {
     width: 100%;
@@ -382,5 +413,44 @@ hr {
   .thmb-full{
     width: 100%;
     height: 100%;
+  }
+  .modal{
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+  .modal>header{
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .modal>header>div>h2{
+    font-size: 32px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .modal>header>button>i{
+    font-size: 32px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .modal>form>div>.formData>label,
+  .modal>form>div>.formData>.input{
+    font-size: 24px;
+  }
+  .modal>form>div>.formData>input{
+    padding: 5px;
+    height: 40px;
+  }
+  .modal>form>div>.formData>textarea{
+    padding: 5px;
+    height: 70px;
   }
 }

@@ -52,7 +52,9 @@ li{
 h1 {
     color:var(--primary);
 }
-
+textarea {
+     resize: none;
+}
 .text-over{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -69,14 +71,7 @@ h1 {
     padding: 0.5rem ;
 }
 
-/* .photographer_section article a{
-    width: 100%;
-}
-.photographer_section article a>div>h2,
-.photographer_section article a>div>h3,
-.photographer_section article a>div>h4{
-    max-width: 100%;
-} */
+
 
 .photographer_section article a:hover>img {
     transform: scale(1.02);

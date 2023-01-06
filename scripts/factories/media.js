@@ -54,11 +54,11 @@ function mediaFactory(data, otherData, index) {
 
         const titlecard = document.createElement('h3')
         titlecard.id = 'titleCard'
-        titlecard.className = 'primary fw700'
+        titlecard.className = 'primary fw700 text-over'
         titlecard.textContent = title
 
         const count_like = document.createElement('span')
-        count_like.className = "fs16 fw700 p05 primary"
+        count_like.className = "fs16 fw700 p05 primary "
         count_like.id = "btn_like"
         count_like.textContent = likes
 
@@ -95,7 +95,6 @@ function mediaFactory(data, otherData, index) {
         }
         media.setAttribute("tabindex", 0);
         media.className = "thmb"
-        // media.id = "media"
 
         /* Mise en place de la view */
         article.appendChild(openCarousel)
@@ -112,6 +111,7 @@ function mediaFactory(data, otherData, index) {
         const p = document.createElement('p')
         mySlides.className = "mySlides"
         mediaSlide.className = "thmb-full"
+        p.className = "primary"
         p.textContent = title
         slides.appendChild(mySlides)
         mySlides.appendChild(mediaSlide)
