@@ -57,13 +57,12 @@ main {
   cursor: pointer;
   background: none;
   border: none;
-  
 }
 .modal header button span {
   color: white;
 }
 .modal header button:hover span {
- color: var(--primary);
+  color: var(--primary);
 }
 
 .modal header h2 {
@@ -109,14 +108,13 @@ form textarea {
   font-size: 16px;
 }
 form input:focus,
-form textarea:focus{
+form textarea:focus {
   outline: rgb(0, 195, 255) 2px solid;
 }
 form button:hover,
-form button:focus{
+form button:focus {
   border: 1px solid black;
 }
-
 
 .thmb {
   width: 100%;
@@ -258,7 +256,7 @@ form button:focus{
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  
+
   z-index: 1;
 }
 
@@ -268,25 +266,25 @@ form button:focus{
   text-decoration: none;
   display: block;
 }
-.dropdown-content a::after{
+.dropdown-content a::after {
   position: absolute;
-      left: 50%;
-      top: 0;
-      content:"";
-      width: 80%;
-      height: 1px;
-      background-color: white;
-      transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  transform: translateX(-50%);
 }
-.dropdown-content a::before{
+.dropdown-content a::before {
   position: absolute;
-      left: 50%;
-      top: 50%;
-      content:"";
-      width: 80%;
-      height: 1px;
-      background-color: white;
-      transform: translateX(-50%);
+  left: 50%;
+  top: 50%;
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  transform: translateX(-50%);
 }
 .dropdown-content a span {
   color: white;
@@ -340,85 +338,85 @@ hr {
   width: 100%;
   border-radius: 5px;
 }
-.fa-xmark{
+.fa-xmark {
   font-size: 3.5rem;
 }
 
-@media screen and (min-width: 768px)and (max-width: 991px){
-  .photograph-header>div{
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .photograph-header > div {
     align-items: center;
   }
-  .cardFixed{
+  .cardFixed {
     width: 50%;
-    left:50;
+    left: 50;
     transform: translateX(-50%);
-    border-radius: 0; 
+    border-radius: 0;
   }
-  .modal{
+  .modal {
     width: 100%;
     padding: 1rem;
   }
-  .modal>header>div>h2{
+  .modal > header > div > h2 {
     font-size: 48px;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .modal>header>button>span{
+  .modal > header > button > span {
     font-size: 48px;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .modal>form>div>.formData>label,
-  .modal>form>div>.formData>.input{
+  .modal > form > div > .formData > label,
+  .modal > form > div > .formData > .input {
     font-size: 32px;
   }
-  .modal>form>div>.formData>input{
+  .modal > form > div > .formData > input {
     padding: 5px;
     height: 50px;
   }
-  .modal>form>div>.formData>textarea{
+  .modal > form > div > .formData > textarea {
     padding: 5px;
     height: 90px;
   }
 }
 
-@media screen and (max-width: 767px){
-  main{
+@media screen and (max-width: 767px) {
+  main {
     margin: 0;
     padding: 1rem;
   }
-  header{
+  header {
     margin: 1rem auto;
   }
   .photograph-header {
     width: 100%;
   }
-  .photograph-header>div{
+  .photograph-header > div {
     align-items: center;
   }
-  .cardFixed{
+  .cardFixed {
     width: 100%;
-    left:0;
-    border-radius: 0; 
+    left: 0;
+    border-radius: 0;
   }
-  .mediaModal{
+  .mediaModal {
     padding: 1rem;
   }
-  .modal-content{
+  .modal-content {
     padding-top: 2rem;
   }
-  .thmb-full{
+  .thmb-full {
     width: 100%;
     height: 100%;
   }
-  .modal{
+  .modal {
     margin: 0;
     width: 100%;
     padding: 1rem;
   }
-  .modal>header{
+  .modal > header {
     margin: 0;
     display: flex;
     flex-wrap: nowrap;
@@ -428,27 +426,27 @@ hr {
     width: 100%;
     padding: 1rem 0;
   }
-  .modal>header>div>h2{
+  .modal > header > div > h2 {
     font-size: 32px;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .modal>header>button>span{
+  .modal > header > button > span {
     font-size: 32px;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .modal>form>div>.formData>label,
-  .modal>form>div>.formData>.input{
+  .modal > form > div > .formData > label,
+  .modal > form > div > .formData > .input {
     font-size: 24px;
   }
-  .modal>form>div>.formData>input{
+  .modal > form > div > .formData > input {
     padding: 5px;
     height: 40px;
   }
-  .modal>form>div>.formData>textarea{
+  .modal > form > div > .formData > textarea {
     padding: 5px;
     height: 70px;
   }

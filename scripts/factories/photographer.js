@@ -4,7 +4,7 @@ function photographerFactory(data) {
     const { id, name, portrait, city, country, tagline, price } = data;
 
     const picture = `assets/photographers/${portrait}`;
-    
+
     function getUserCardDOM() {
         const article = document.createElement('article');
         article.className = "grid-item-4 grid-item-md-6 grid-item-s-12  flex center pt2"

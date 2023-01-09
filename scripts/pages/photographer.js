@@ -1,13 +1,13 @@
 async function getData() {
     const url = 'data/photographers.json'
     return await fetch(url)
-    .then(res => res.json())
-    .then(data => data)
-    .catch(error=> console.log("erreur: " + error))
+        .then(res => res.json())
+        .then(data => data)
+        .catch(error => console.log("erreur: " + error))
 }
 
 
-async function  displayPhotographers(photographer) {
+async function displayPhotographers(photographer) {
     const photographerModel = photographerMediaFactory(photographer); //Envoi data photogrpaher dans Factories>media
     photographerModel.getPhotographerCardDOM();
 }
@@ -21,26 +21,26 @@ const dateFilters = document.querySelector('#date')
 const popularFilters = document.querySelector('#popular')
 
 // Filtres
- function sort_array_by(medias, name) {
-        mediasSection.innerHTML = ""
-        slides.innerHTML = ""
-        if(name === "likes"){
-             medias.sort((p1, p2)=>(p1[name] < p2[name])? 1 : (p1[name] > p2[name])? -1 : 0)
-        }else{
-            medias.sort((p1, p2)=>(p1[name] > p2[name])? 1 : (p1[name] < p2[name])? -1 : 0)
-        }
-       
-         return medias
-     }
+function sort_array_by(medias, name) {
+    mediasSection.innerHTML = ""
+    slides.innerHTML = ""
+    if (name === "likes") {
+        medias.sort((p1, p2) => (p1[name] < p2[name]) ? 1 : (p1[name] > p2[name]) ? -1 : 0)
+    } else {
+        medias.sort((p1, p2) => (p1[name] > p2[name]) ? 1 : (p1[name] < p2[name]) ? -1 : 0)
+    }
+
+    return medias
+}
 
 async function displayMedia(medias, likes) {
-    if (selectDropdown.textContent === '' ) {
+    if (selectDropdown.textContent === '') {
         sort_array_by(medias, 'likes')
         selectDropdown.textContent = "Popularité"
         popularFilters.style.display = 'none'
     }
     // Filtres
-    titleFilters.addEventListener("click", ()=>{
+    titleFilters.addEventListener("click", () => {
         let array = sort_array_by(medias, "title")
         selectDropdown.textContent = "Titre"
         displayMedia(array, likes)
@@ -49,7 +49,7 @@ async function displayMedia(medias, likes) {
         dateFilters.style.display = 'block'
 
     })
-    dateFilters.addEventListener("click", ()=>{
+    dateFilters.addEventListener("click", () => {
         let array = sort_array_by(medias, "date")
         selectDropdown.textContent = "Date"
         displayMedia(array, likes)
@@ -57,7 +57,7 @@ async function displayMedia(medias, likes) {
         titleFilters.style.display = 'block'
         popularFilters.style.display = 'block'
     })
-    popularFilters.addEventListener("click", ()=>{
+    popularFilters.addEventListener("click", () => {
         let array = sort_array_by(medias, 'likes')
         selectDropdown.textContent = "Popularité"
         displayMedia(array, likes)
@@ -65,10 +65,10 @@ async function displayMedia(medias, likes) {
         dateFilters.style.display = 'block'
         titleFilters.style.display = 'block'
     })
-    
+
 
     medias.forEach((media) => { //boucle séparation media via tableau pré trier en amont
-        
+
         let indexMedia = null
         indexMedia = medias.indexOf(media)
         const mediaModel = mediaFactory(media, likes, indexMedia); //Envoi data media dans Factories>media
@@ -82,7 +82,7 @@ async function displayMedia(medias, likes) {
 async function init() {
     const { photographers, media } = await getData(); //Récuperation Data
     const catchUrl = new URL(window.location) //Récuperation Url 
-    const getParams = new URLSearchParams(catchUrl.search) 
+    const getParams = new URLSearchParams(catchUrl.search)
     const targetParams = getParams.get("id") //Récuperation Id dans Url
     const findPhotographer = photographers.find((e) => targetParams == e.id) //Récuperation Utilisateur via IdUrl
     const findMedia = [] //Creation tableau pour tri média en fonction de photogrpaherId et Id url
@@ -90,7 +90,7 @@ async function init() {
     let total = 0
     //Boucle recuperation média
     media.forEach((e) => {
-        if(e.photographerId == targetParams){
+        if (e.photographerId == targetParams) {
             findMedia.push(e)
             allLikes.push(e.likes)
             total += e.likes //Sommes de touts les likes

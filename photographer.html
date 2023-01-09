@@ -14,14 +14,15 @@
 
 <body>
   <div class="loader">
-      <div class="lds-ring"></div>
+    <div class="lds-ring"></div>
     <h1>FishEye</h1>
-    </div>
-    
-    <h2 id="loaderName"></h2>
+  </div>
+
+  <h2 id="loaderName"></h2>
   </div>
   <header>
-    <a href="index.html" class="logo-container" onclick="(this.href)"><img src="assets/images/logo.png" class="logo" alt="Fisheye - Home page"/></a>
+    <a href="index.html" class="logo-container" onclick="(this.href)"><img src="assets/images/logo.png" class="logo"
+        alt="Fisheye - Home page" /></a>
   </header>
   <main id="main">
     <section class="photograph-header grid flex  p1">
@@ -37,22 +38,26 @@
       </div>
     </section>
     <!-- dropdown -->
-    <section class="filters-container pt2 pb3" >
+    <section class="filters-container pt2 pb3">
       <h2>Trier Par</h2>
       <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded="false"><span id="selectDropdown"></span><span class="chevron fa-solid fa-chevron-down"></span></button>
+        <button class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded="false"><span
+            id="selectDropdown"></span><span class="chevron fa-solid fa-chevron-down"></span></button>
         <ul id="myDropdown" class="dropdown-content" role="listbox" aria-activedescendant="selected">
           <li>
-          <a href="#" id="date" onclick="closeDropdown()" role="option" aria-labelledby="Order by date"><span>Date</span></a>
-        </li>
+            <a href="#" id="date" onclick="closeDropdown()" role="option"
+              aria-labelledby="Order by date"><span>Date</span></a>
+          </li>
           <li>
-          <a href="#" id="title" onclick="closeDropdown()" role="option" aria-labelledby="Order by title"><span>Titre</span></a>
-        </li>
+            <a href="#" id="title" onclick="closeDropdown()" role="option"
+              aria-labelledby="Order by title"><span>Titre</span></a>
+          </li>
           <li>
-          <a href="#" id="popular" onclick="closeDropdown()" role="option" aria-labelledby="Order by popular"><span>Populaire</span></a>
-        </li>
+            <a href="#" id="popular" onclick="closeDropdown()" role="option"
+              aria-labelledby="Order by popular"><span>Populaire</span></a>
+          </li>
         </ul>
-      </div> 
+      </div>
     </section>
 
     <section class="media_section grid pt1 pb4" aria-haspopup="true" aria-expanded="false"></section>
@@ -63,32 +68,33 @@
       <span class="pricePerDay fs24 fw500"></span>
     </section>
   </main>
-<!-- contact modal -->
+  <!-- contact modal -->
   <div id="contact_modal">
     <div class="modal">
       <header class="grid a-baseline">
-        <div  class="grid-item-11 grid-item-md-11 grid-item-s-11 flex-col a-start start text-over">
+        <div class="grid-item-11 grid-item-md-11 grid-item-s-11 flex-col a-start start text-over">
           <h2 class="w100">Contactez-moi</h2>
           <h2 id="name"></h2>
         </div>
-           <button class="grid-item-1 grid-item-md-1 grid-item-s-1 flex end" onclick="closeModalContact()"  onkeydown="handleKeyDown(e)?closeModalContact():undefined"><span class="fa-solid fa-xmark"></span></button>
-     
+        <button class="grid-item-1 grid-item-md-1 grid-item-s-1 flex end" onclick="closeModalContact()"
+          onkeydown="handleKeyDown(e)?closeModalContact():undefined"><span class="fa-solid fa-xmark"></span></button>
+
       </header>
       <form>
         <div>
-          <div class="formData" >
+          <div class="formData">
             <label for="first">Prénom</label>
-            <input class="input" type="text" id="first" name="first"/>
+            <input class="input" type="text" id="first" name="first" />
             <span class="msg"></span>
           </div>
           <div class="formData">
             <label for="last">Nom</label>
-            <input class="input" type="text" id="last" name="last"/>
+            <input class="input" type="text" id="last" name="last" />
             <span class="msg"></span>
           </div>
           <div class="formData">
             <label for="email">Email</label>
-            <input class="input" type="text" id="email" name="email"/>
+            <input class="input" type="text" id="email" name="email" />
             <span class="msg"></span>
           </div>
           <div class="formData">
@@ -103,12 +109,15 @@
   </div>
   <!-- modal carousel media -->
   <div id="myModal" class="mediaModal">
-    <button class="close cursor" onclick="closeModal()" aria-label="Close"><span class="fa-solid fa-xmark"></span></button>
+    <button class="close cursor" onclick="closeModal()" aria-label="Close"><span
+        class="fa-solid fa-xmark"></span></button>
     <div class="modal-content">
 
-      <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Previous"><span class="fa-solid fa-chevron-left"></span></a>
+      <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined"
+        aria-label="Previous"><span class="fa-solid fa-chevron-left"></span></a>
       <div class="slides"></div>
-      <a class="next" onclick="plusSlides(1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Next"><span class="fa-solid fa-chevron-right"></span></a>
+      <a class="next" onclick="plusSlides(1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined"
+        aria-label="Next"><span class="fa-solid fa-chevron-right"></span></a>
 
 
     </div>

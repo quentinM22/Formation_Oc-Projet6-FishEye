@@ -1,7 +1,7 @@
 function photographerMediaFactory(data) {
     const { name, portrait, city, country, tagline, price } = data;
     const picture = `assets/photographers/${portrait}`;
-    document.title = `Fisheye - photographe ${name}` 
+    document.title = `Fisheye - photographe ${name}`
     function getPhotographerCardDOM() {
         const loaderName = document.querySelector('#loaderName')
         loaderName.textContent = name
@@ -11,13 +11,13 @@ function photographerMediaFactory(data) {
 
         const userName = document.querySelector('#photographeName')
         userName.textContent = name
-        
+
         const userLocation = document.querySelector('#photographeLocation')
         userLocation.textContent = city + ", " + country
-        
+
         const userTagline = document.querySelector('#photographeTagline')
         userTagline.textContent = tagline
-        
+
         const pics_users = document.querySelector('.pics_users')
         const pics_user = document.createElement('img')
         pics_user.setAttribute('src', picture)
@@ -25,8 +25,8 @@ function photographerMediaFactory(data) {
         pics_user.className = 'pics_user'
 
         pics_users.appendChild(pics_user)
-        
-        
+
+
         const pricePerDay = document.querySelector('.pricePerDay')
         pricePerDay.textContent = `${price}€/Jour`
     }
@@ -40,7 +40,7 @@ function mediaFactory(data, otherData, index) {
     let media = null
     let mediaSlide = null
 
-    
+
     const picture = `assets/media/${photographerId}`;
 
     function getMediaCardDOM() {
@@ -90,11 +90,11 @@ function mediaFactory(data, otherData, index) {
             media.setAttribute('type', `video/mp4`)
             media.setAttribute("preload", "metadata")
             media.setAttribute('alt', `${video}, closeup view`)
-            
+
             mediaSlide = document.createElement('video')
             mediaSlide.setAttribute('src', `${picture}/${video}`)
             mediaSlide.setAttribute('type', `video/mp4`)
-            mediaSlide.setAttribute("controls","")
+            mediaSlide.setAttribute("controls", "")
             mediaSlide.setAttribute('alt', `${video}, closeup view`)
         }
         media.setAttribute("tabindex", 0);

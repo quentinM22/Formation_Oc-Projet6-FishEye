@@ -1,136 +1,128 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 @import url("photographer.css");
 @import url("grid.css");
 @import url("./anim.css");
-:root{
-    /* Color */
-    --primary: #901C1C;
-    --secondary: #DB8876;
-    --dark-gray:#525252;
-    --white:#FAFAFA;
-
+:root {
+  /* Color */
+  --primary: #901c1c;
+  --secondary: #db8876;
+  --dark-gray: #525252;
+  --white: #fafafa;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    color: black;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  box-sizing: border-box;
 }
 
-*:focus{
-    outline: none;
+*:focus {
+  outline: none;
 }
-html{
-    max-width: 1400px;
+html {
+  max-width: 1400px;
 }
-@media screen and (min-width:1400px) {
-    html{
-        margin: auto; 
-     }
-     
- }
+@media screen and (min-width: 1400px) {
+  html {
+    margin: auto;
+  }
+}
 body {
-    font-family: "DM Sans", sans-serif;
-    margin: 0;
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
 }
-
 
 header {
-    display: flex;
-    flex-flow: row wrap;                                                
-    justify-content: space-between;
-    align-items: center;
-    margin: 44px 100px ;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 44px 100px;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 h1 {
-    color:var(--primary);
+  color: var(--primary);
 }
 textarea {
-     resize: none;
+  resize: none;
 }
-.text-over{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
+.text-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 .logo {
-    height: 50px;
-    padding: 0.5rem ;
+  height: 50px;
+  padding: 0.5rem;
 }
 
-
-
-.photographer_section article a:hover>img {
-    transform: scale(1.02);
-    transition: 0.5s;
-    box-shadow: 40px -20px var(--dark-gray);
-
+.photographer_section article a:hover > img {
+  transform: scale(1.02);
+  transition: 0.5s;
+  box-shadow: 40px -20px var(--dark-gray);
 }
-.photographer_section article:hover a>div>h2{
-    transform: scale(1.02);
-    transition: 0.5s;
-    text-shadow: 1px 1px var(--primary);
+.photographer_section article:hover a > div > h2 {
+  transform: scale(1.02);
+  transition: 0.5s;
+  text-shadow: 1px 1px var(--primary);
 }
-.photographer_section article a:focus>img{
-    transform: scale(1.05);
-    transition: 0.5s;
-    box-shadow: 40px -20px var(--dark-gray);     
-}   
-.photographer_section article a:focus>div>h2{
-    transform: scale(1.05);
-    transition: 0.5s;
-    text-shadow: 1px 1px var(--primary);
+.photographer_section article a:focus > img {
+  transform: scale(1.05);
+  transition: 0.5s;
+  box-shadow: 40px -20px var(--dark-gray);
 }
-.photographer_section article img{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+.photographer_section article a:focus > div > h2 {
+  transform: scale(1.05);
+  transition: 0.5s;
+  text-shadow: 1px 1px var(--primary);
 }
-.pics_user{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    object-fit: cover;
+.photographer_section article img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.cardMedia{
-    width: 100%;
-    height: 100vh;
+.pics_user {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.cardMedia {
+  width: 100%;
+  height: 100vh;
 }
 
-.logo-container{
-    border: transparent 2px solid;
+.logo-container {
+  border: transparent 2px solid;
 }
 .logo-container:focus,
-.logo-container:hover{
+.logo-container:hover {
   border: #901c1c 2px solid;
 }
 
-
-@media screen and (min-width: 768px)and (max-width: 991px){
+@media screen and (min-width: 768px) and (max-width: 991px) {
 }
 
-@media screen and (max-width: 767px){
-    header {
-        flex-direction: column;
-        justify-content: center;
-
-    }
-    header>h1{
-        padding-top: 1rem;
-        text-align: center;
-    }
+@media screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  header > h1 {
+    padding-top: 1rem;
+    text-align: center;
+  }
 }
