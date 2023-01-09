@@ -41,7 +41,7 @@
     <section class="filters-container pt2 pb3" >
       <h2>Trier Par</h2>
       <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded="false"><span id="selectDropdown"></span><i class="chevron fa-solid fa-chevron-down"></i></button>
+        <button class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded="false"><span id="selectDropdown"></span><span class="chevron fa-solid fa-chevron-down"></span></button>
         <ul id="myDropdown" class="dropdown-content" role="listbox" aria-activedescendant="selected">
           <li>
           <a href="#" id="date" onclick="closeDropdown()" role="option" aria-labelledby="Order by date"><span>Date</span></a>
@@ -59,7 +59,7 @@
     <section class="media_section grid pt1 pb4" aria-haspopup="true" aria-expanded="false"></section>
     <section class="cardFixed">
       <div>
-        <span class="allLikes fs24 fw500"></span><i class="fa-solid fa-heart fs24"></i>
+        <span class="allLikes fs24 fw500"></span><span class="fa-solid fa-heart fs24"></span>
       </div>
       <span class="pricePerDay fs24 fw500"></span>
     </section>
@@ -72,29 +72,29 @@
           <h2 class="w100">Contactez-moi</h2>
           <h2 id="name"></h2>
         </div>
-           <button class="grid-item-1 grid-item-md-1 grid-item-s-1 flex end" onclick="closeModalContact()"  onkeydown="handleKeyDown(e)?closeModalContact():undefined"><i class="fa-solid fa-xmark"></i></button>
+           <button class="grid-item-1 grid-item-md-1 grid-item-s-1 flex end" onclick="closeModalContact()"  onkeydown="handleKeyDown(e)?closeModalContact():undefined"><span class="fa-solid fa-xmark"></span></button>
      
       </header>
-      <form autofocus>
+      <form>
         <div>
           <div class="formData" >
-            <label>Prénom</label>
-            <input class="input" type="text" id="first" autofocus/>
+            <label for="first">Prénom</label>
+            <input class="input" type="text" id="first" name="first"/>
             <span class="msg"></span>
           </div>
           <div class="formData">
-            <label>Nom</label>
-            <input class="input" type="text" id="last"/>
+            <label for="last">Nom</label>
+            <input class="input" type="text" id="last" name="last"/>
             <span class="msg"></span>
           </div>
           <div class="formData">
-            <label>Email</label>
-            <input class="input" type="text" id="email"/>
+            <label for="email">Email</label>
+            <input class="input" type="text" id="email" name="email"/>
             <span class="msg"></span>
           </div>
           <div class="formData">
-            <label>Votre message</label>
-            <textarea class="input" cols="98" rows="6" id="msg"></textarea>
+            <label for="msg">Votre message</label>
+            <textarea class="input" cols="98" rows="6" id="msg" name="message"></textarea>
             <span class="msg"></span>
           </div>
         </div>
@@ -104,12 +104,12 @@
   </div>
   <!-- modal carousel media -->
   <div id="myModal" class="mediaModal">
-    <button class="close cursor" onclick="closeModal()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="close cursor" onclick="closeModal()" aria-label="Close"><span class="fa-solid fa-xmark"></span></button>
     <div class="modal-content">
 
-      <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></a>
+      <a class="prev" onclick="plusSlides(-1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Previous"><span class="fa-solid fa-chevron-left"></span></a>
       <div class="slides"></div>
-      <a class="next" onclick="plusSlides(1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></a>
+      <a class="next" onclick="plusSlides(1)" onkeydown="handleKeyDown(e)?plusSlides(-1):undefined" aria-label="Next"><span class="fa-solid fa-chevron-right"></span></a>
 
 
     </div>

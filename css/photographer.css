@@ -38,7 +38,7 @@ main {
 .modal {
   border-radius: 5px;
   background-color: #db8876;
-  width: 75%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,10 +59,10 @@ main {
   border: none;
   
 }
-.modal header button i {
+.modal header button span {
   color: white;
 }
-.modal header button:hover i {
+.modal header button:hover span {
  color: var(--primary);
 }
 
@@ -136,7 +136,7 @@ form button:focus{
 .btn_like:hover {
   cursor: pointer;
 }
-.btn_like > i {
+.btn_like > span {
   font-size: 1rem;
 }
 .cardFixed {
@@ -176,7 +176,7 @@ form button:focus{
   left: 90%;
   font-size: 3.5rem;
 }
-.mediaModal > button:hover > i {
+.mediaModal > button:hover > span {
   cursor: pointer;
   color: var(--primary);
 }
@@ -192,7 +192,7 @@ form button:focus{
   width: 25%;
   font-size: 3.5rem;
 }
-.modal-content > a:hover > i {
+.modal-content > a:hover > span {
   cursor: pointer;
   color: var(--primary);
 }
@@ -240,8 +240,7 @@ form button:focus{
 .dropbtn > span {
   color: #fafafa;
 }
-.dropbtn:hover > span,
-.dropbtn:hover > i {
+.dropbtn:hover > span {
   color: black;
 }
 
@@ -366,7 +365,7 @@ hr {
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .modal>header>button>i{
+  .modal>header>button>span{
     font-size: 48px;
     justify-content: flex-start;
     align-items: flex-start;
@@ -436,7 +435,7 @@ hr {
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .modal>header>button>i{
+  .modal>header>button>span{
     font-size: 32px;
     justify-content: flex-start;
     align-items: flex-start;

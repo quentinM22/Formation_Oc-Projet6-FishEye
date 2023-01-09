@@ -1,12 +1,14 @@
-function photographerFactory(data) {
+function photographerMediaFactory(data) {
     const { name, portrait, city, country, tagline, price } = data;
     const picture = `assets/photographers/${portrait}`;
     document.title = `Fisheye - photographe ${name}` 
     function getPhotographerCardDOM() {
         const loaderName = document.querySelector('#loaderName')
         loaderName.textContent = name
+
         const contactName = document.querySelector('#name')
         contactName.textContent = name
+
         const userName = document.querySelector('#photographeName')
         userName.textContent = name
         
@@ -78,6 +80,7 @@ function mediaFactory(data, otherData, index) {
             media = document.createElement('img')
             media.setAttribute('src', `${picture}/${image}`)
             media.setAttribute('alt', `${image}, closeup view`)
+
             mediaSlide = document.createElement('img')
             mediaSlide.setAttribute('src', `${picture}/${image}`)
             mediaSlide.setAttribute('alt', `${image}, closeup view`)
@@ -87,6 +90,7 @@ function mediaFactory(data, otherData, index) {
             media.setAttribute('type', `video/mp4`)
             media.setAttribute("preload", "metadata")
             media.setAttribute('alt', `${video}, closeup view`)
+            
             mediaSlide = document.createElement('video')
             mediaSlide.setAttribute('src', `${picture}/${video}`)
             mediaSlide.setAttribute('type', `video/mp4`)

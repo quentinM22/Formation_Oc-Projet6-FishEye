@@ -8,7 +8,7 @@ async function getData() {
 
 
 async function  displayPhotographers(photographer) {
-    const photographerModel = photographerFactory(photographer); //Envoi data photogrpaher dans Factories>media
+    const photographerModel = photographerMediaFactory(photographer); //Envoi data photogrpaher dans Factories>media
     photographerModel.getPhotographerCardDOM();
 }
 
