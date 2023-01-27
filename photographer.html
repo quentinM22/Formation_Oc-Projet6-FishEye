@@ -16,10 +16,9 @@
   <div class="loader">
     <div class="lds-ring"></div>
     <h1>FishEye</h1>
+    <h2 id="loaderName"></h2>
   </div>
 
-  <h2 id="loaderName"></h2>
-  </div>
   <header>
     <a href="index.html" class="logo-container" onclick="(this.href)"><img src="assets/images/logo.png" class="logo"
         alt="Fisheye - Home page" /></a>
@@ -122,7 +121,11 @@
 
     </div>
   </div>
-
+  <!-- Class -->
+  <script src="./scripts/factories/PhotographerFactory.js"></script>
+  <script src="./scripts/factories/ImageFactory.js"></script>
+  <script src="./scripts/factories/VideoFactory.js"></script>
+  <!-- Controller -->
   <script src="scripts/factories/media.js"></script>
   <script src="scripts/pages/photographer.js"></script>
   <script src="scripts/utils/handleKeyDown.js"></script>

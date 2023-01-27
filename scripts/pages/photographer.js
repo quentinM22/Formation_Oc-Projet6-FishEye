@@ -9,7 +9,8 @@ async function getData() {
 
 async function displayPhotographers(photographer) {
     const photographerModel = photographerMediaFactory(photographer); //Envoi data photogrpaher dans Factories>media
-    photographerModel.getPhotographerCardDOM();
+    const section = document.querySelector('.photograph-header')
+    section.innerHTML = photographerModel.getPhotographerCardDOM()
 }
 
 
@@ -66,15 +67,13 @@ async function displayMedia(medias, likes) {
         titleFilters.style.display = 'block'
     })
 
-
     medias.forEach((media) => { //boucle séparation media via tableau pré trier en amont
-
         let indexMedia = null
         indexMedia = medias.indexOf(media)
         const mediaModel = mediaFactory(media, likes, indexMedia); //Envoi data media dans Factories>media
         //Creation du Dom dans mediaSection 
         const mediaCardDOM = mediaModel.getMediaCardDOM();
-        mediasSection.appendChild(mediaCardDOM);
+        mediasSection.innerHTML += mediaCardDOM 
     });
 }
 

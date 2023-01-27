@@ -1,3 +1,14 @@
+// Variobles
+const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
+const regexMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+// Elements Globale formulaire
+const form = document.querySelector("form")
+// Elements donnees formulaire 
+const first = document.querySelector("#first")
+const last = document.querySelector("#last")
+const email = document.querySelector("#email")
+const msg = document.querySelector("#msg")
+
 let IsFormContactKeyListenerActive = false;
 document.addEventListener('keydown',
     function (event) {
@@ -22,16 +33,7 @@ function closeModalContact() {
 }
 
 
-// Variobles
-const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
-const regexMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-// Elements Globale formulaire
-const form = document.querySelector("form")
-// Elements donnees formulaire 
-const first = document.querySelector("#first")
-const last = document.querySelector("#last")
-const email = document.querySelector("#email")
-const msg = document.querySelector("#msg")
+
 
 
 function checkFirstName() {
@@ -132,7 +134,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (validate() == true) {
         console.log(`
-        Formulaire pris en compte 
+        Formulaire pris en compte
         Prénom: ${first.value}
         Nom: ${last.value}
         Email: ${email.value}
