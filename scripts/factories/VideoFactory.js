@@ -16,7 +16,7 @@ class Video {
                 </video>
             </a>
             <div class="flex center s-b p05">
-                <h3 id="titleCard" class="primary fw700 text-over">${this.title}</h3>
+                <h3 id="titleCard" class="grid-item-10 primary fw700 text-over">${this.title}</h3>
                 <button class="btn_like " onclick="like(event)">
                     <span class="fs16 fw700 p05 primary " id="btn_like">${this.likes}</span>
                     <i id="targetHeart" class="fa-regular fa-heart  fs3 primary"></i>
