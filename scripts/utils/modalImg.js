@@ -5,10 +5,10 @@ document.addEventListener("keydown", function (event) {
 function handleLightboxKeyDown(event) {
 	switch (event.key) {
 		case "ArrowLeft":
-			plusSlides(-1)
+			changeSlide(-1)
 			break
 		case "ArrowRight":
-			plusSlides(+1)
+			changeSlide(+1)
 			break
 		case "Escape":
 			closeModal()
@@ -31,7 +31,7 @@ function closeModal() {
 
 let slideIndex = null
 
-function plusSlides(n) {
+function changeSlide(n) {
 	showSlides((slideIndex += n))
 }
 

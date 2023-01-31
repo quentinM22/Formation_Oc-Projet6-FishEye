@@ -1,3 +1,8 @@
+/**
+ * Fonction lien entre class Photographer et view Photographer
+ * @param {données} data
+ * @returns
+ */
 // eslint-disable-next-line no-unused-vars
 function photographerMediaFactory(data) {
 	// eslint-disable-next-line no-undef

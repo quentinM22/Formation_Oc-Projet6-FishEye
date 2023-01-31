@@ -78,21 +78,33 @@ async function init() {
 	const catchUrl = new URL(window.location) //Récuperation Url
 	const getParams = new URLSearchParams(catchUrl.search)
 	const targetParams = getParams.get("id") //Récuperation Id dans Url
+
 	const findPhotographer = photographers.find((e) => targetParams == e.id) //Récuperation Utilisateur via IdUrl
-	const findMedia = [] //Creation tableau pour tri média en fonction de photogrpaherId et Id url
-	const allLikes = [] //Récuperation de tout les likes pour les additionnés
-	let total = 0
-	//Boucle recuperation média
-	media.forEach((e) => {
-		if (e.photographerId == targetParams) {
-			findMedia.push(e)
-			allLikes.push(e.likes)
-			total += e.likes //Sommes de touts les likes
-		}
-	})
-	//Envoi data dans les différent display
-	displayMedia(findMedia, total)
-	displayPhotographers(findPhotographer)
+	if (!findPhotographer) {
+		const main = document.querySelector("main")
+		main.innerHTML = `
+    <div class="error flex-col center pt2">
+      <h1>Erreur 404: Pages non disponible</h1>
+      <a href="index.html" onclick="(this.href)"> Accueil </a>
+    </div>
+    
+    `
+	} else {
+		const findMedia = [] //Creation tableau pour tri média en fonction de photogrpaherId et Id url
+		const allLikes = [] //Récuperation de tout les likes pour les additionnés
+		let total = 0
+		//Boucle recuperation média
+		media.forEach((e) => {
+			if (e.photographerId == targetParams) {
+				findMedia.push(e)
+				allLikes.push(e.likes)
+				total += e.likes //Sommes de touts les likes
+			}
+		})
+		//Envoi data dans les différent display
+		displayMedia(findMedia, total)
+		displayPhotographers(findPhotographer)
+	}
 }
 
 init()

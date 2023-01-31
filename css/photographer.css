@@ -1,324 +1,337 @@
 #contact_modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding: 50px;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(255, 255, 255, 0.6);
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding: 50px;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background-color: rgba(255, 255, 255, 0.6);
 }
 main {
-  margin: 0 100px 0 100px;
+	margin: 0 100px 0 100px;
+}
+.error > a {
+	margin-top: 2rem;
+	color: #901c1c;
+	font-weight: bold;
+	font-size: larger;
+	padding: 1rem;
+	border: #901c1c 1px solid;
+	border-radius: 5px;
+}
+.error > a:hover,
+.error > a:focus {
+	color: black;
+	background: #db8876;
+	border: #fafafa;
 }
 .photograph-header {
-  background-color: #fafafa;
+	background-color: #fafafa;
 }
 
 .contact_button {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  padding: 11px;
-  width: 170px;
-  height: 70px;
-  border: none;
-  background: #901c1c;
-  border-radius: 5px;
-  cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	padding: 11px;
+	width: 170px;
+	height: 70px;
+	border: none;
+	background: #901c1c;
+	border-radius: 5px;
+	cursor: pointer;
 }
 .contact_button:hover {
-  color: black;
-  background: var(--secondary);
-  cursor: pointer;
+	color: black;
+	background: var(--secondary);
+	cursor: pointer;
 }
 
 .modal {
-  border-radius: 5px;
-  background-color: #db8876;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 35px;
-  margin: auto;
+	border-radius: 5px;
+	background-color: #db8876;
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 35px;
+	margin: auto;
 }
 
 .modal header {
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .modal header button {
-  cursor: pointer;
-  background: none;
-  border: none;
+	cursor: pointer;
+	background: none;
+	border: none;
 }
 .modal header button span {
-  color: white;
+	color: white;
 }
 .modal header button:hover span {
-  color: var(--primary);
+	color: var(--primary);
 }
 
 .modal header h2 {
-  font-size: 64px;
-  font-weight: 400;
-  text-align: center;
-  text-overflow: ellipsis;
+	font-size: 64px;
+	font-weight: 400;
+	text-align: center;
+	text-overflow: ellipsis;
 }
 
 form {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 form label {
-  color: #312e2e;
-  font-size: 30px;
+	color: #312e2e;
+	font-size: 30px;
 }
 
 form div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: self-start;
-  margin-bottom: 12px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: self-start;
+	margin-bottom: 12px;
 }
 
 form input {
-  width: 100%;
-  height: 68px;
-  border: none;
-  padding: 1rem;
-  font-size: 16px;
-  border-radius: 5px;
+	width: 100%;
+	height: 68px;
+	border: none;
+	padding: 1rem;
+	font-size: 16px;
+	border-radius: 5px;
 }
 form textarea {
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  padding: 1rem;
-  font-size: 16px;
+	width: 100%;
+	border-radius: 5px;
+	border: none;
+	padding: 1rem;
+	font-size: 16px;
 }
 form input:focus,
 form textarea:focus {
-  outline: rgb(0, 195, 255) 2px solid;
+	outline: rgb(0, 195, 255) 2px solid;
 }
 form button:hover,
 form button:focus {
-  border: 1px solid black;
+	border: 1px solid black;
 }
 
 .thmb {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
 }
 .thmb:hover,
 .thmb:focus {
-  cursor: pointer;
-  transform: scale(1.02);
-  box-shadow: -5px 5px 1px var(--secondary);
+	cursor: pointer;
+	transform: scale(1.02);
+	box-shadow: -5px 5px 1px var(--secondary);
 }
 .btn_like {
-  background: none;
-  border: none;
+	background: none;
+	border: none;
 }
 .btn_like:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 .btn_like > span {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 .cardFixed {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  height: 89px;
-  bottom: -5%;
-  left: 70%;
-  width: 25%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: var(--secondary);
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.5rem;
+	height: 89px;
+	bottom: -5%;
+	left: 70%;
+	width: 25%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: var(--secondary);
 }
 
 /* The Modal (background) */
 .mediaModal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: var(--white);
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 50px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: var(--white);
 }
 .mediaModal > button {
-  background: none;
-  border: none;
-  position: relative;
-  left: 90%;
-  font-size: 3.5rem;
+	background: none;
+	border: none;
+	position: relative;
+	left: 90%;
+	font-size: 3.5rem;
 }
 .mediaModal > button:hover > span {
-  cursor: pointer;
-  color: var(--primary);
+	cursor: pointer;
+	color: var(--primary);
 }
 .modal-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .modal-content > a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 25%;
-  font-size: 3.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	font-size: 3.5rem;
 }
 .modal-content > a:hover > span {
-  cursor: pointer;
-  color: var(--primary);
+	cursor: pointer;
+	color: var(--primary);
 }
 
 .mySlides {
-  display: none;
+	display: none;
 }
 .thmb-full {
-  width: 100%;
-  height: 75vh;
+	width: 100%;
+	height: 75vh;
 }
-
 .error-message {
-  color: red;
-  font-weight: 300;
-  font-size: small;
+	color: red;
+	font-weight: 300;
+	font-size: small;
 }
 .text-control.input-error {
-  border: solid 3px red;
+	border: solid 3px red;
 }
 .checkbox-icon.input-error {
-  outline: 3px solid red;
+	outline: 3px solid red;
 }
 /* */
 .text-control.input-valid {
-  border: 3px solid green;
+	border: 3px solid green;
 }
 
 .dropbtn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  padding: 11px;
-  width: 160px;
-  height: 50px;
-  border: none;
-  background: #901c1c;
-  border-radius: 5px;
-  cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	padding: 11px;
+	width: 160px;
+	height: 50px;
+	border: none;
+	background: #901c1c;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .dropbtn > span {
-  color: #fafafa;
+	color: #fafafa;
 }
 .dropbtn:hover > span {
-  color: black;
+	color: black;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--primary);
-  width: 160px;
-  margin-top: -5px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+	display: none;
+	position: absolute;
+	background-color: var(--primary);
+	width: 160px;
+	margin-top: -5px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 
-  z-index: 1;
+	z-index: 1;
 }
 
 .dropdown-content a {
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: rgb(255, 255, 255);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 .dropdown-content a::after {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  content: "";
-  width: 80%;
-  height: 1px;
-  background-color: white;
-  transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	top: 0;
+	content: "";
+	width: 80%;
+	height: 1px;
+	background-color: white;
+	transform: translateX(-50%);
 }
 .dropdown-content a::before {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  content: "";
-  width: 80%;
-  height: 1px;
-  background-color: white;
-  transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	content: "";
+	width: 80%;
+	height: 1px;
+	background-color: white;
+	transform: translateX(-50%);
 }
 .dropdown-content a span {
-  color: white;
+	color: white;
 }
 
 .dropdown-content a:hover,
 .dropdown-content a:focus,
 .dropdown-content a:hover span,
 .dropdown-content a:focus span {
-  background-color: var(--secondary);
-  color: black;
+	background-color: var(--secondary);
+	color: black;
 }
 hr {
-  color: #fafafa;
-  width: 75%;
-  margin: 0 auto 0;
-  border-radius: 20px;
+	color: #fafafa;
+	width: 75%;
+	margin: 0 auto 0;
+	border-radius: 20px;
 }
 .show {
-  display: block;
+	display: block;
 }
 
 .chevron {
-  color: #fafafa;
+	color: #fafafa;
 }
-.btn_like{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+.btn_like {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .btn_like:focus {
-  outline: 1px solid #901c1c;
-  box-shadow: -5px 5px 1px var(--secondary);
+	outline: 1px solid #901c1c;
+	box-shadow: -5px 5px 1px var(--secondary);
 }
 
 .contact_button:hover,
@@ -327,132 +340,132 @@ hr {
 .dropbtn:focus,
 .dropbtn:focus > span,
 .dropbtn:focus > .chevron {
-  background-color: var(--secondary);
-  color: black;
+	background-color: var(--secondary);
+	color: black;
 }
 
 .filters-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 .dropdown {
-  margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 .input {
-  width: 100%;
-  border-radius: 5px;
+	width: 100%;
+	border-radius: 5px;
 }
 .fa-xmark {
-  font-size: 3.5rem;
+	font-size: 3.5rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .photograph-header > div {
-    align-items: center;
-  }
-  .cardFixed {
-    width: 50%;
-    left: 50;
-    transform: translateX(-50%);
-    border-radius: 0;
-  }
-  .modal {
-    width: 100%;
-    padding: 1rem;
-  }
-  .modal > header > div > h2 {
-    font-size: 48px;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .modal > header > button > span {
-    font-size: 48px;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .modal > form > div > .formData > label,
-  .modal > form > div > .formData > .input {
-    font-size: 32px;
-  }
-  .modal > form > div > .formData > input {
-    padding: 5px;
-    height: 50px;
-  }
-  .modal > form > div > .formData > textarea {
-    padding: 5px;
-    height: 90px;
-  }
+	.photograph-header > div {
+		align-items: center;
+	}
+	.cardFixed {
+		width: 50%;
+		left: 50;
+		transform: translateX(-50%);
+		border-radius: 0;
+	}
+	.modal {
+		width: 100%;
+		padding: 1rem;
+	}
+	.modal > header > div > h2 {
+		font-size: 48px;
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.modal > header > button > span {
+		font-size: 48px;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.modal > form > div > .formData > label,
+	.modal > form > div > .formData > .input {
+		font-size: 32px;
+	}
+	.modal > form > div > .formData > input {
+		padding: 5px;
+		height: 50px;
+	}
+	.modal > form > div > .formData > textarea {
+		padding: 5px;
+		height: 90px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-  main {
-    margin: 0;
-    padding: 1rem;
-  }
-  header {
-    margin: 1rem auto;
-  }
-  .photograph-header {
-    width: 100%;
-  }
-  .photograph-header > div {
-    align-items: center;
-  }
-  .cardFixed {
-    width: 100%;
-    left: 0;
-    border-radius: 0;
-  }
-  .mediaModal {
-    padding: 1rem;
-  }
-  .modal-content {
-    padding-top: 2rem;
-  }
-  .thmb-full {
-    width: 100%;
-    height: 100%;
-  }
-  .modal {
-    margin: 0;
-    width: 100%;
-    padding: 1rem;
-  }
-  .modal > header {
-    margin: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 100%;
-    padding: 1rem 0;
-  }
-  .modal > header > div > h2 {
-    font-size: 32px;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .modal > header > button > span {
-    font-size: 32px;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .modal > form > div > .formData > label,
-  .modal > form > div > .formData > .input {
-    font-size: 24px;
-  }
-  .modal > form > div > .formData > input {
-    padding: 5px;
-    height: 40px;
-  }
-  .modal > form > div > .formData > textarea {
-    padding: 5px;
-    height: 70px;
-  }
+	main {
+		margin: 0;
+		padding: 1rem;
+	}
+	header {
+		margin: 1rem auto;
+	}
+	.photograph-header {
+		width: 100%;
+	}
+	.photograph-header > div {
+		align-items: center;
+	}
+	.cardFixed {
+		width: 100%;
+		left: 0;
+		border-radius: 0;
+	}
+	.mediaModal {
+		padding: 1rem;
+	}
+	.modal-content {
+		padding-top: 2rem;
+	}
+	.thmb-full {
+		width: 100%;
+		height: 100%;
+	}
+	.modal {
+		margin: 0;
+		width: 100%;
+		padding: 1rem;
+	}
+	.modal > header {
+		margin: 0;
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: baseline;
+		width: 100%;
+		padding: 1rem 0;
+	}
+	.modal > header > div > h2 {
+		font-size: 32px;
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.modal > header > button > span {
+		font-size: 32px;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.modal > form > div > .formData > label,
+	.modal > form > div > .formData > .input {
+		font-size: 24px;
+	}
+	.modal > form > div > .formData > input {
+		padding: 5px;
+		height: 40px;
+	}
+	.modal > form > div > .formData > textarea {
+		padding: 5px;
+		height: 70px;
+	}
 }
