@@ -1,15 +1,16 @@
+// eslint-disable-next-line no-unused-vars
 class Image {
-    constructor(data) {
-        this.id = data.id
-        this.photographerId = data.photographerId
-        this.title = data.title
-        this.image = data.image
-        this.likes = data.likes
-        this.date = data.date
-        this.price = data.price
-    }
-    createHtml(index) {
-        return `
+	constructor(data) {
+		this.id = data.id
+		this.photographerId = data.photographerId
+		this.title = data.title
+		this.image = data.image
+		this.likes = data.likes
+		this.date = data.date
+		this.price = data.price
+	}
+	createHtml(index) {
+		return `
         <article class="media card grid-item-4 grid-item-md-6 grid-item-s-12 pt1">
             <a href="#" onclick="openModal();currentSlide(${index})">
              <img src="assets/media/${this.photographerId}/${this.image}" alt="${this.title}, image" tabindex="0" class="thmb">
@@ -23,13 +24,13 @@ class Image {
             </div>
         </article>
         `
-    }
-    createSlide() {
-        return `
+	}
+	createSlide() {
+		return `
         <div class="mySlides">
             <img src="assets/media/${this.photographerId}/${this.image}" alt="${this.title}, image" class="thmb-full">
             <p class="primary">${this.title}</p>
         </div>
         `
-    }
+	}
 }

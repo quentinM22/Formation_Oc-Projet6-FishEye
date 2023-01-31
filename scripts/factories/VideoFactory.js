@@ -1,15 +1,16 @@
+/* eslint-disable no-unused-vars */
 class Video {
-    constructor(data) {
-        this.id = data.id
-        this.photographerId = data.photographerId
-        this.title = data.title
-        this.video = data.video
-        this.likes = data.likes
-        this.date = data.date
-        this.price = data.price
-    }
-    createHtml(index) {
-        return `
+	constructor(data) {
+		this.id = data.id
+		this.photographerId = data.photographerId
+		this.title = data.title
+		this.video = data.video
+		this.likes = data.likes
+		this.date = data.date
+		this.price = data.price
+	}
+	createHtml(index) {
+		return `
         <article class="media card grid-item-4 grid-item-md-6 grid-item-s-12 pt1">
             <a href="#" onclick="openModal();currentSlide(${index})">
                 <video src="assets/media/${this.photographerId}/${this.video}" type="video/mp4" preload="metadata" alt="${this.title}, video" tabindex="0" class="thmb">
@@ -24,13 +25,13 @@ class Video {
             </div>
         </article>
         `
-    }
-    createSlide(){
-        return`
+	}
+	createSlide() {
+		return `
         <div class="mySlides">
             <video src="assets/media/${this.photographerId}/${this.video}" type="video/mp4" controls="" alt="${this.title}, video" class="thmb-full"></video>
             <p class="primary">${this.title}</p>
         </div>
         `
-    }
+	}
 }

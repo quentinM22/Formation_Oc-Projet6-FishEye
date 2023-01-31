@@ -1,13 +1,11 @@
 function showContent() {
-    document.querySelector('.loader').classList.add('hidden')
+	document.querySelector(".loader").classList.add("hidden")
 }
 setTimeout(showContent, 2000)
-
-
-const findMediaSection = document.querySelector('.media_section')
+function showMedia() {
+	findMediaSection.classList.add("fade")
+}
+const findMediaSection = document.querySelector(".media_section")
 if (findMediaSection) {
-    function showMedia() {
-        findMediaSection.classList.add('fade')
-    }
-    setTimeout(showMedia, 3000)
+	setTimeout(showMedia, 3000)
 }

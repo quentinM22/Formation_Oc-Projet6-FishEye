@@ -1,15 +1,16 @@
+// eslint-disable-next-line no-unused-vars
 class Photographer {
-    constructor(data) {
-        this.name = data.name
-        this.id = data.id
-        this.city = data.city
-        this.country = data.country
-        this.tagline = data.tagline
-        this.price = data.price
-        this.portrait = data.portrait
-    }
-    createHtml() {
-        return `
+	constructor(data) {
+		this.name = data.name
+		this.id = data.id
+		this.city = data.city
+		this.country = data.country
+		this.tagline = data.tagline
+		this.price = data.price
+		this.portrait = data.portrait
+	}
+	createHtml() {
+		return `
         <article class="grid-item-4 grid-item-md-6 grid-item-s-12  flex center pt2">
             <a href="photographer.html?id=${this.id}" role="link" class="grid-col flex-col center ">
                 <img src="assets/photographers/${this.portrait}" alt="lien vers la pages de ${this.name}">
@@ -22,9 +23,9 @@ class Photographer {
             </a>
         </article>
         `
-    }
-    createMediaHtml() {
-        return `
+	}
+	createMediaHtml() {
+		return `
             <div class="grid-item-4 grid-item-md-12   grid-item-s-12 flex-col a-start p1">
                 <h1 id="photographeName" class="fs64 fw700 secondary m0">${this.name}</h1>
                 <h2 id="photographeLocation" class="fs24 fw400 primary">${this.city}, ${this.country}</h2>
@@ -36,14 +37,14 @@ class Photographer {
             <div class="pics_users grid-item-4 grid-item-md-12 grid-item-s-12 flex center p1">
                 <img src="assets/photographers/${this.portrait}" alt="${this.name}" class="pics_user"></div>
         `
-    }
-    createMediaTitle(){
-        return `Fisheye - photographe ${this.name}`
-    }
-    priceCardFixed(){
-        return `${this.price}€/Jour`
-    }
-    targetName(){
-        return `${this.name}`
-    }
+	}
+	createMediaTitle() {
+		return `Fisheye - photographe ${this.name}`
+	}
+	priceCardFixed() {
+		return `${this.price}€/Jour`
+	}
+	targetName() {
+		return `${this.name}`
+	}
 }
