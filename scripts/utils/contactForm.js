@@ -1,6 +1,6 @@
 // Variobles
 const regexName = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/
-const regexMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+const regexMail = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/
 // Elements Globale formulaire
 const form = document.querySelector("form")
 // Elements donnees formulaire
