@@ -190,7 +190,7 @@ form button:focus {
 	font-size: 3.5rem;
 }
 .mediaModal > button > span,
-.modal-content > a > span {
+.modal-content > button > span {
 	color: var(--primary);
 }
 .modal-content {
@@ -198,14 +198,16 @@ form button:focus {
 	justify-content: space-between;
 	align-items: center;
 }
-.modal-content > a {
+.modal-content > button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 25%;
 	font-size: 3.5rem;
+	border: none;
+	background-color: transparent;
 }
-.modal-content > a:hover > span,
+.modal-content > button :hover > span,
 .mediaModal > button:hover > span {
 	color: black;
 	cursor: pointer;
@@ -213,6 +215,9 @@ form button:focus {
 
 .mySlides {
 	display: none;
+}
+.mySlides > img:focus {
+	border: 1px solid #901c1c;
 }
 .thmb-full {
 	width: 100%;

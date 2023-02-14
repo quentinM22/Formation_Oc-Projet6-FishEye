@@ -27,7 +27,7 @@ class Image {
 	}
 	createSlide() {
 		return `
-        <div class="mySlides">
+        <div class="mySlides"  tabindex="0" aria-label="${this.title}, image">
             <img src="assets/media/${this.photographerId}/${this.image}" alt="${this.title}, image" class="thmb-full">
             <p class="primary">${this.title}</p>
         </div>

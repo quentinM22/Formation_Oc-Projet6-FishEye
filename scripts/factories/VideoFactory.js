@@ -28,7 +28,7 @@ class Video {
 	}
 	createSlide() {
 		return `
-        <div class="mySlides">
+        <div class="mySlides" tabindex="0" aria-label="${this.title} ,video">
             <video src="assets/media/${this.photographerId}/${this.video}" type="video/mp4" controls="" alt="${this.title}, video" class="thmb-full"></video>
             <p class="primary">${this.title}</p>
         </div>
