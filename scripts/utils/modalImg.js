@@ -20,12 +20,14 @@ function handleLightboxKeyDown(event) {
 function openModal() {
 	document.querySelector(".mediaModal").style.display = "block"
 	document.querySelector("main").style.display = "none"
+	document.querySelector("header").style.display = "none"
 	IsLightboxKeyListenerActive = true
 }
 
 function closeModal() {
 	document.querySelector(".mediaModal").style.display = "none"
 	document.querySelector("main").style.display = "block"
+	document.querySelector("header").style.display = "block"
 	IsLightboxKeyListenerActive = false
 }
 

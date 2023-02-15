@@ -13,11 +13,11 @@ class Image {
 		return `
         <article class="media card grid-item-4 grid-item-md-6 grid-item-s-12 pt1">
             <a href="#" onclick="openModal();currentSlide(${index})">
-             <img src="assets/media/${this.photographerId}/${this.image}" alt="${this.title}, image" tabindex="0" class="thmb">
+             <img src="assets/media/${this.photographerId}/${this.image}" alt="${this.title}, image" tabindex="0" class="thmb"/>
             </a>
             <div class="flex center s-b p05">
                 <h3 id="titleCard" class="grid-item-10 primary fw700 text-over">${this.title}</h3>
-                <button class="btn_like flex" onclick="like(event)">
+                <button class="btn_like flex" onclick="like(event)" aria-label="${this.likes} like">
                     <span class="fs16 fw700 p05 primary " id="btn_like">${this.likes}</span>
                     <i id="targetHeart" class="fa-regular fa-heart  fs3 primary"></i>
                 </button>

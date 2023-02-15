@@ -16,11 +16,15 @@ document.addEventListener("keydown", function (event) {
 	}
 })
 const main = document.querySelector("main")
+const header = document.querySelector("header")
 const modal = document.getElementById("contact_modal")
 // eslint-disable-next-line no-unused-vars
 function displayModal() {
 	modal.style.display = "block"
 	main.style.position = "fixed"
+	modal.setAttribute("aria-modal", "true")
+	main.setAttribute("aria-hidden", "true")
+	header.setAttribute("aria-hidden", "true")
 	IsFormContactKeyListenerActive = true
 	first.focus()
 }
@@ -28,6 +32,9 @@ function displayModal() {
 function closeModalContact() {
 	modal.style.display = "none"
 	main.style.position = ""
+	modal.setAttribute("aria-modal", "false")
+	main.setAttribute("aria-hidden", "false")
+	header.setAttribute("aria-hidden", "false")
 	IsFormContactKeyListenerActive = false
 }
 

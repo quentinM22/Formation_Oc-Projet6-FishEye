@@ -19,28 +19,29 @@
     <h2 id="loaderName"></h2>
   </div>
 
-  <header>
+  <header aria-hidden="false">
     <a href="index.html" class="logo-container" onclick="(this.href)"><img src="assets/images/logo.png" class="logo"
         alt="Fisheye - Home page" /></a>
   </header>
-  <main id="main">
-    <section class="photograph-header grid flex  p1">
+  <main id="main" aria-hidden="false">
+    <section class="photograph-header grid flex  p1" tabindex="0">
       <div class="grid-item-4 grid-item-md-12   grid-item-s-12 flex-col a-start p1">
         <h1 id="photographeName" class="fs64 fw700 secondary m0"></h1>
         <h2 id="photographeLocation" class="fs24 fw400 primary"></h2>
         <h3 id="photographeTagline" class="fs18 fw400 dark-gray"></h3>
       </div>
       <div class="grid-item-4 grid-item-md-12 grid-item-s-12 flex center p1">
-        <button class="contact_button" onclick="displayModal()" aria-label="Contactez-moi">Contactez-moi</button>
+        <button class="contact_button" onclick="displayModal()" aria-label="Contactez-moi"
+          tabindex="0">Contactez-moi</button>
       </div>
       <div class="pics_users grid-item-4 grid-item-md-12 grid-item-s-12 flex center p1">
       </div>
     </section>
     <!-- dropdown -->
-    <section class="filters-container pt2 pb3">
+    <section class="filters-container pt2 pb3" tabindex="0">
       <h2>Trier Par</h2>
       <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded="false"><span
+        <button class="dropbtn" aria-haspopup="listbox" role="button" aria-expanded="false" tabindex="0"><span
             id="selectDropdown"></span><span class="chevron fa-solid fa-chevron-down"></span></button>
         <ul id="myDropdown" class="dropdown-content" role="listbox" aria-activedescendant="selected">
           <li>
@@ -68,7 +69,7 @@
     </section>
   </main>
   <!-- contact modal -->
-  <div id="contact_modal">
+  <div id="contact_modal" aria-modal="false">
     <div class="modal">
       <header class="grid a-baseline">
         <div class="grid-item-11 grid-item-md-11 grid-item-s-11 flex-col a-start start text-over">
