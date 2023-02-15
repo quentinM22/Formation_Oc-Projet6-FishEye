@@ -8,13 +8,14 @@ const first = document.querySelector("#first")
 const last = document.querySelector("#last")
 const email = document.querySelector("#email")
 const msg = document.querySelector("#msg")
-
+const btn = form.querySelector("button")
 let IsFormContactKeyListenerActive = false
 document.addEventListener("keydown", function (event) {
 	if (event.key === "Escape") {
 		IsFormContactKeyListenerActive ? closeModalContact() : undefined
 	}
 })
+
 const main = document.querySelector("main")
 const header = document.querySelector("header")
 const modal = document.getElementById("contact_modal")
@@ -22,6 +23,7 @@ const modal = document.getElementById("contact_modal")
 function displayModal() {
 	modal.style.display = "block"
 	main.style.position = "fixed"
+	modal.setAttribute("aria-hidden", "false")
 	modal.setAttribute("aria-modal", "true")
 	main.setAttribute("aria-hidden", "true")
 	header.setAttribute("aria-hidden", "true")
@@ -37,7 +39,15 @@ function closeModalContact() {
 	header.setAttribute("aria-hidden", "false")
 	IsFormContactKeyListenerActive = false
 }
-
+//Rester dans la modal
+modal.addEventListener("keydown", (e) => {
+	if (e.key === "Tab") {
+		if (document.activeElement === btn) {
+			e.preventDefault()
+			first.focus()
+		}
+	}
+})
 function checkFirstName() {
 	if (!first.value || !first.value.match(regexName)) {
 		getError(first, "Veuillez renseigner un Prénom valide.")
