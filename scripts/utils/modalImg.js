@@ -15,12 +15,19 @@ function handleLightboxKeyDown(event) {
 			break
 	}
 }
-
+const myModal = document.querySelector("#myModal")
+const close = myModal.querySelector(".close")
+const prev = myModal.querySelector(".prev")
+const next = myModal.querySelector(".next")
 // eslint-disable-next-line no-unused-vars
 function openModal() {
 	document.querySelector(".mediaModal").style.display = "block"
 	document.querySelector("main").style.display = "none"
 	document.querySelector("header").style.display = "none"
+	close.setAttribute("tabindex", "0")
+	prev.setAttribute("tabindex", "0")
+	next.setAttribute("tabindex", "0")
+
 	IsLightboxKeyListenerActive = true
 }
 
@@ -28,8 +35,21 @@ function closeModal() {
 	document.querySelector(".mediaModal").style.display = "none"
 	document.querySelector("main").style.display = "block"
 	document.querySelector("header").style.display = "block"
+	close.setAttribute("tabindex", "-1")
+	prev.setAttribute("tabindex", "-1")
+	next.setAttribute("tabindex", "-1")
 	IsLightboxKeyListenerActive = false
 }
+
+// //Rester dans la modal
+myModal.addEventListener("keydown", (e) => {
+	if (e.key === "Tab") {
+		if (document.activeElement === next) {
+			e.preventDefault()
+			close.focus()
+		}
+	}
+})
 
 let slideIndex = null
 

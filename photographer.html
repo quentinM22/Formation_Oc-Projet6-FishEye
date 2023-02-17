@@ -110,15 +110,16 @@
   </div>
   <!-- modal carousel media -->
   <div id="myModal" class="mediaModal">
-    <button class="close cursor" onclick="closeModal()" aria-label="Close"><span class="fa-solid fa-xmark"></span>
+    <button class="close cursor" onclick="closeModal()" aria-label="Close" tabindex="-1"><span
+        class="fa-solid fa-xmark"></span>
     </button>
     <div class="modal-content">
 
       <button class="prev" onclick="changeSlide(-1)" onkeydown="handleKeyDown(e)?changeSlide(-1):undefined"
-        aria-label="Previous"><span class="fa-solid fa-chevron-left"></span></button>
+        aria-label="Previous" tabindex="-1"><span class="fa-solid fa-chevron-left"></span></button>
       <div class="slides"></div>
       <button role="button" class="next" onclick="changeSlide(1)" onkeydown="handleKeyDown(e)?changeSlide(-1):undefined"
-        aria-label="Next"><span class="fa-solid fa-chevron-right"></span></button>
+        aria-label="Next" tabindex="-1"><span class="fa-solid fa-chevron-right"></span></button>
 
 
     </div>

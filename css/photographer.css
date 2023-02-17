@@ -263,13 +263,22 @@ form button:focus {
 .prev:hover {
 	cursor: pointer;
 }
+.close:focus > span,
+.prev:focus > span,
+.next:focus > span {
+	border: 1px solid black;
+}
+
 .close > span:hover,
-.close > span:focus,
 .prev > span:hover,
-.prev > span:focus,
 .next > span:hover,
-.next > span:focus {
+.close:focus > span,
+.prev:focus > span,
+.next:focus > span {
 	color: black;
+}
+.mySlides > .thmb-full:focus {
+	border: #901c1c 2px solid;
 }
 .dropbtn > span {
 	color: #fafafa;
