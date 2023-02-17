@@ -35,7 +35,7 @@ class Photographer {
                 <button class="contact_button" onclick="displayModal()" aria-label="Contact me">Contactez-moi</button>
             </div>
             <div class="pics_users grid-item-4 grid-item-md-12 grid-item-s-12 flex center p1">
-                <img src="assets/photographers/${this.portrait}" alt="${this.name}, photo" class="pics_user"></div>
+                <img src="assets/photographers/${this.portrait}" alt="${this.name}, photo" class="pics_user" aria-hidden="true"></div>
         `
 	}
 	createMediaTitle() {
